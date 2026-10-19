@@ -1,0 +1,2812 @@
+{
+  "schema_version": 2,
+  "algorithm": "hc",
+  "parameters": {
+    "variant": "sideways",
+    "max_iterations": null,
+    "max_sideways_moves": 20,
+    "objective": "value"
+  },
+  "seed": 22,
+  "initial_state": {
+    "placements": {
+      "P01_Small": {
+        "position": [
+          0,
+          5,
+          0
+        ],
+        "orientation": [
+          "y",
+          "z",
+          "x"
+        ],
+        "truck_index": 1,
+        "inside": true
+      },
+      "P02_Fragile1": {
+        "position": [
+          2,
+          4,
+          0
+        ],
+        "orientation": [
+          "y",
+          "z",
+          "x"
+        ],
+        "truck_index": 1,
+        "inside": true
+      },
+      "P03_Heavy1": {
+        "position": [
+          3,
+          4,
+          0
+        ],
+        "orientation": [
+          "x",
+          "z",
+          "y"
+        ],
+        "truck_index": 1,
+        "inside": true
+      },
+      "P04_Medium": {
+        "position": [
+          27,
+          0,
+          0
+        ],
+        "orientation": [
+          "z",
+          "x",
+          "y"
+        ],
+        "truck_index": null,
+        "inside": false
+      },
+      "P05_Fragile2": {
+        "position": [
+          2,
+          6,
+          0
+        ],
+        "orientation": [
+          "z",
+          "y",
+          "x"
+        ],
+        "truck_index": 1,
+        "inside": true
+      },
+      "P06_Big1": {
+        "position": [
+          39,
+          0,
+          0
+        ],
+        "orientation": [
+          "z",
+          "x",
+          "y"
+        ],
+        "truck_index": null,
+        "inside": false
+      },
+      "P07_Long": {
+        "position": [
+          1,
+          6,
+          0
+        ],
+        "orientation": [
+          "x",
+          "z",
+          "y"
+        ],
+        "truck_index": 2,
+        "inside": true
+      },
+      "P08_Heavy2": {
+        "position": [
+          51,
+          0,
+          0
+        ],
+        "orientation": [
+          "z",
+          "y",
+          "x"
+        ],
+        "truck_index": null,
+        "inside": false
+      },
+      "P09_Fragile3": {
+        "position": [
+          57,
+          0,
+          0
+        ],
+        "orientation": [
+          "x",
+          "z",
+          "y"
+        ],
+        "truck_index": null,
+        "inside": false
+      },
+      "P10_Medium2": {
+        "position": [
+          63,
+          0,
+          0
+        ],
+        "orientation": [
+          "y",
+          "z",
+          "x"
+        ],
+        "truck_index": null,
+        "inside": false
+      },
+      "P11_Big2": {
+        "position": [
+          0,
+          1,
+          0
+        ],
+        "orientation": [
+          "x",
+          "y",
+          "z"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "P12_Small2": {
+        "position": [
+          0,
+          4,
+          2
+        ],
+        "orientation": [
+          "x",
+          "y",
+          "z"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "P13_Fragile4": {
+        "position": [
+          1,
+          1,
+          0
+        ],
+        "orientation": [
+          "x",
+          "z",
+          "y"
+        ],
+        "truck_index": 2,
+        "inside": true
+      },
+      "P14_Heavy3": {
+        "position": [
+          0,
+          1,
+          0
+        ],
+        "orientation": [
+          "y",
+          "x",
+          "z"
+        ],
+        "truck_index": 1,
+        "inside": true
+      },
+      "P15_ValueHigh": {
+        "position": [
+          5,
+          1,
+          0
+        ],
+        "orientation": [
+          "y",
+          "z",
+          "x"
+        ],
+        "truck_index": 2,
+        "inside": true
+      }
+    }
+  },
+  "final_state": {
+    "placements": {
+      "P01_Small": {
+        "position": [
+          2,
+          2,
+          3
+        ],
+        "orientation": [
+          "y",
+          "z",
+          "x"
+        ],
+        "truck_index": 2,
+        "inside": true
+      },
+      "P02_Fragile1": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "orientation": [
+          "y",
+          "z",
+          "x"
+        ],
+        "truck_index": 2,
+        "inside": true
+      },
+      "P03_Heavy1": {
+        "position": [
+          0,
+          6,
+          0
+        ],
+        "orientation": [
+          "x",
+          "z",
+          "y"
+        ],
+        "truck_index": 1,
+        "inside": true
+      },
+      "P04_Medium": {
+        "position": [
+          0,
+          3,
+          0
+        ],
+        "orientation": [
+          "z",
+          "x",
+          "y"
+        ],
+        "truck_index": 2,
+        "inside": true
+      },
+      "P05_Fragile2": {
+        "position": [
+          2,
+          0,
+          2
+        ],
+        "orientation": [
+          "z",
+          "y",
+          "x"
+        ],
+        "truck_index": 1,
+        "inside": true
+      },
+      "P06_Big1": {
+        "position": [
+          0,
+          7,
+          0
+        ],
+        "orientation": [
+          "z",
+          "x",
+          "y"
+        ],
+        "truck_index": 2,
+        "inside": true
+      },
+      "P07_Long": {
+        "position": [
+          6,
+          0,
+          0
+        ],
+        "orientation": [
+          "x",
+          "z",
+          "y"
+        ],
+        "truck_index": 2,
+        "inside": true
+      },
+      "P08_Heavy2": {
+        "position": [
+          6,
+          7,
+          0
+        ],
+        "orientation": [
+          "z",
+          "y",
+          "x"
+        ],
+        "truck_index": 2,
+        "inside": true
+      },
+      "P09_Fragile3": {
+        "position": [
+          5,
+          5,
+          0
+        ],
+        "orientation": [
+          "x",
+          "z",
+          "y"
+        ],
+        "truck_index": 2,
+        "inside": true
+      },
+      "P10_Medium2": {
+        "position": [
+          4,
+          7,
+          0
+        ],
+        "orientation": [
+          "y",
+          "z",
+          "x"
+        ],
+        "truck_index": 2,
+        "inside": true
+      },
+      "P11_Big2": {
+        "position": [
+          0,
+          1,
+          0
+        ],
+        "orientation": [
+          "x",
+          "y",
+          "z"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "P12_Small2": {
+        "position": [
+          1,
+          4,
+          3
+        ],
+        "orientation": [
+          "x",
+          "y",
+          "z"
+        ],
+        "truck_index": 2,
+        "inside": true
+      },
+      "P13_Fragile4": {
+        "position": [
+          1,
+          6,
+          0
+        ],
+        "orientation": [
+          "x",
+          "z",
+          "y"
+        ],
+        "truck_index": 2,
+        "inside": true
+      },
+      "P14_Heavy3": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "orientation": [
+          "y",
+          "x",
+          "z"
+        ],
+        "truck_index": 1,
+        "inside": true
+      },
+      "P15_ValueHigh": {
+        "position": [
+          5,
+          1,
+          0
+        ],
+        "orientation": [
+          "y",
+          "z",
+          "x"
+        ],
+        "truck_index": 2,
+        "inside": true
+      }
+    }
+  },
+  "final_objective": 1285.0,
+  "duration_seconds": 23.99484890000167,
+  "iterations": 25,
+  "history": [
+    {
+      "iteration": 0,
+      "objective": 820.0,
+      "accepted": false,
+      "neighbors_evaluated": 0,
+      "sideways": false,
+      "sideways_moves": 0,
+      "consecutive_sideways_moves": 0
+    },
+    {
+      "iteration": 1,
+      "objective": 940.0,
+      "accepted": true,
+      "neighbors_evaluated": 987,
+      "sideways": false,
+      "sideways_moves": 0,
+      "consecutive_sideways_moves": 0
+    },
+    {
+      "iteration": 2,
+      "objective": 1050.0,
+      "accepted": true,
+      "neighbors_evaluated": 923,
+      "sideways": false,
+      "sideways_moves": 0,
+      "consecutive_sideways_moves": 0
+    },
+    {
+      "iteration": 3,
+      "objective": 1140.0,
+      "accepted": true,
+      "neighbors_evaluated": 834,
+      "sideways": false,
+      "sideways_moves": 0,
+      "consecutive_sideways_moves": 0
+    },
+    {
+      "iteration": 4,
+      "objective": 1220.0,
+      "accepted": true,
+      "neighbors_evaluated": 756,
+      "sideways": false,
+      "sideways_moves": 0,
+      "consecutive_sideways_moves": 0
+    },
+    {
+      "iteration": 5,
+      "objective": 1285.0,
+      "accepted": true,
+      "neighbors_evaluated": 709,
+      "sideways": false,
+      "sideways_moves": 0,
+      "consecutive_sideways_moves": 0
+    },
+    {
+      "iteration": 6,
+      "objective": 1285.0,
+      "accepted": true,
+      "neighbors_evaluated": 670,
+      "sideways": true,
+      "sideways_moves": 1,
+      "consecutive_sideways_moves": 1
+    },
+    {
+      "iteration": 7,
+      "objective": 1285.0,
+      "accepted": true,
+      "neighbors_evaluated": 672,
+      "sideways": true,
+      "sideways_moves": 2,
+      "consecutive_sideways_moves": 2
+    },
+    {
+      "iteration": 8,
+      "objective": 1285.0,
+      "accepted": true,
+      "neighbors_evaluated": 668,
+      "sideways": true,
+      "sideways_moves": 3,
+      "consecutive_sideways_moves": 3
+    },
+    {
+      "iteration": 9,
+      "objective": 1285.0,
+      "accepted": true,
+      "neighbors_evaluated": 651,
+      "sideways": true,
+      "sideways_moves": 4,
+      "consecutive_sideways_moves": 4
+    },
+    {
+      "iteration": 10,
+      "objective": 1285.0,
+      "accepted": true,
+      "neighbors_evaluated": 655,
+      "sideways": true,
+      "sideways_moves": 5,
+      "consecutive_sideways_moves": 5
+    },
+    {
+      "iteration": 11,
+      "objective": 1285.0,
+      "accepted": true,
+      "neighbors_evaluated": 672,
+      "sideways": true,
+      "sideways_moves": 6,
+      "consecutive_sideways_moves": 6
+    },
+    {
+      "iteration": 12,
+      "objective": 1285.0,
+      "accepted": true,
+      "neighbors_evaluated": 692,
+      "sideways": true,
+      "sideways_moves": 7,
+      "consecutive_sideways_moves": 7
+    },
+    {
+      "iteration": 13,
+      "objective": 1285.0,
+      "accepted": true,
+      "neighbors_evaluated": 697,
+      "sideways": true,
+      "sideways_moves": 8,
+      "consecutive_sideways_moves": 8
+    },
+    {
+      "iteration": 14,
+      "objective": 1285.0,
+      "accepted": true,
+      "neighbors_evaluated": 707,
+      "sideways": true,
+      "sideways_moves": 9,
+      "consecutive_sideways_moves": 9
+    },
+    {
+      "iteration": 15,
+      "objective": 1285.0,
+      "accepted": true,
+      "neighbors_evaluated": 709,
+      "sideways": true,
+      "sideways_moves": 10,
+      "consecutive_sideways_moves": 10
+    },
+    {
+      "iteration": 16,
+      "objective": 1285.0,
+      "accepted": true,
+      "neighbors_evaluated": 689,
+      "sideways": true,
+      "sideways_moves": 11,
+      "consecutive_sideways_moves": 11
+    },
+    {
+      "iteration": 17,
+      "objective": 1285.0,
+      "accepted": true,
+      "neighbors_evaluated": 699,
+      "sideways": true,
+      "sideways_moves": 12,
+      "consecutive_sideways_moves": 12
+    },
+    {
+      "iteration": 18,
+      "objective": 1285.0,
+      "accepted": true,
+      "neighbors_evaluated": 709,
+      "sideways": true,
+      "sideways_moves": 13,
+      "consecutive_sideways_moves": 13
+    },
+    {
+      "iteration": 19,
+      "objective": 1285.0,
+      "accepted": true,
+      "neighbors_evaluated": 705,
+      "sideways": true,
+      "sideways_moves": 14,
+      "consecutive_sideways_moves": 14
+    },
+    {
+      "iteration": 20,
+      "objective": 1285.0,
+      "accepted": true,
+      "neighbors_evaluated": 739,
+      "sideways": true,
+      "sideways_moves": 15,
+      "consecutive_sideways_moves": 15
+    },
+    {
+      "iteration": 21,
+      "objective": 1285.0,
+      "accepted": true,
+      "neighbors_evaluated": 738,
+      "sideways": true,
+      "sideways_moves": 16,
+      "consecutive_sideways_moves": 16
+    },
+    {
+      "iteration": 22,
+      "objective": 1285.0,
+      "accepted": true,
+      "neighbors_evaluated": 747,
+      "sideways": true,
+      "sideways_moves": 17,
+      "consecutive_sideways_moves": 17
+    },
+    {
+      "iteration": 23,
+      "objective": 1285.0,
+      "accepted": true,
+      "neighbors_evaluated": 747,
+      "sideways": true,
+      "sideways_moves": 18,
+      "consecutive_sideways_moves": 18
+    },
+    {
+      "iteration": 24,
+      "objective": 1285.0,
+      "accepted": true,
+      "neighbors_evaluated": 731,
+      "sideways": true,
+      "sideways_moves": 19,
+      "consecutive_sideways_moves": 19
+    },
+    {
+      "iteration": 25,
+      "objective": 1285.0,
+      "accepted": true,
+      "neighbors_evaluated": 709,
+      "sideways": true,
+      "sideways_moves": 20,
+      "consecutive_sideways_moves": 20
+    }
+  ],
+  "initial_population": [],
+  "stop_reason": "max_sideways_moves",
+  "is_stub": false,
+  "metadata": {
+    "accepted_moves": 25,
+    "sideways_moves": 20,
+    "consecutive_sideways_moves": 20
+  },
+  "problem": {
+    "trucks": [
+      {
+        "dimensions": {
+          "w": 5,
+          "l": 6,
+          "h": 4
+        },
+        "max_capacity": 150.0
+      },
+      {
+        "dimensions": {
+          "w": 6,
+          "l": 8,
+          "h": 4
+        },
+        "max_capacity": 250.0
+      },
+      {
+        "dimensions": {
+          "w": 8,
+          "l": 10,
+          "h": 5
+        },
+        "max_capacity": 400.0
+      }
+    ],
+    "packages": [
+      {
+        "id": "P01_Small",
+        "dimensions": {
+          "w": 2,
+          "l": 2,
+          "h": 2
+        },
+        "value": 40.0,
+        "weight": 20.0,
+        "is_fragile": false,
+        "eta": 1
+      },
+      {
+        "id": "P02_Fragile1",
+        "dimensions": {
+          "w": 2,
+          "l": 3,
+          "h": 1
+        },
+        "value": 75.0,
+        "weight": 10.0,
+        "is_fragile": true,
+        "eta": 2
+      },
+      {
+        "id": "P03_Heavy1",
+        "dimensions": {
+          "w": 3,
+          "l": 3,
+          "h": 2
+        },
+        "value": 60.0,
+        "weight": 80.0,
+        "is_fragile": false,
+        "eta": 4
+      },
+      {
+        "id": "P04_Medium",
+        "dimensions": {
+          "w": 3,
+          "l": 4,
+          "h": 2
+        },
+        "value": 90.0,
+        "weight": 35.0,
+        "is_fragile": false,
+        "eta": 2
+      },
+      {
+        "id": "P05_Fragile2",
+        "dimensions": {
+          "w": 2,
+          "l": 2,
+          "h": 1
+        },
+        "value": 85.0,
+        "weight": 12.0,
+        "is_fragile": true,
+        "eta": 1
+      },
+      {
+        "id": "P06_Big1",
+        "dimensions": {
+          "w": 4,
+          "l": 4,
+          "h": 2
+        },
+        "value": 110.0,
+        "weight": 70.0,
+        "is_fragile": false,
+        "eta": 3
+      },
+      {
+        "id": "P07_Long",
+        "dimensions": {
+          "w": 2,
+          "l": 5,
+          "h": 1
+        },
+        "value": 55.0,
+        "weight": 25.0,
+        "is_fragile": false,
+        "eta": 5
+      },
+      {
+        "id": "P08_Heavy2",
+        "dimensions": {
+          "w": 3,
+          "l": 3,
+          "h": 2
+        },
+        "value": 80.0,
+        "weight": 90.0,
+        "is_fragile": false,
+        "eta": 2
+      },
+      {
+        "id": "P09_Fragile3",
+        "dimensions": {
+          "w": 3,
+          "l": 3,
+          "h": 1
+        },
+        "value": 120.0,
+        "weight": 15.0,
+        "is_fragile": true,
+        "eta": 1
+      },
+      {
+        "id": "P10_Medium2",
+        "dimensions": {
+          "w": 3,
+          "l": 3,
+          "h": 2
+        },
+        "value": 65.0,
+        "weight": 30.0,
+        "is_fragile": false,
+        "eta": 3
+      },
+      {
+        "id": "P11_Big2",
+        "dimensions": {
+          "w": 4,
+          "l": 5,
+          "h": 2
+        },
+        "value": 130.0,
+        "weight": 75.0,
+        "is_fragile": false,
+        "eta": 4
+      },
+      {
+        "id": "P12_Small2",
+        "dimensions": {
+          "w": 2,
+          "l": 2,
+          "h": 1
+        },
+        "value": 30.0,
+        "weight": 10.0,
+        "is_fragile": false,
+        "eta": 2
+      },
+      {
+        "id": "P13_Fragile4",
+        "dimensions": {
+          "w": 2,
+          "l": 3,
+          "h": 1
+        },
+        "value": 95.0,
+        "weight": 14.0,
+        "is_fragile": true,
+        "eta": 1
+      },
+      {
+        "id": "P14_Heavy3",
+        "dimensions": {
+          "w": 3,
+          "l": 4,
+          "h": 2
+        },
+        "value": 100.0,
+        "weight": 110.0,
+        "is_fragile": false,
+        "eta": 3
+      },
+      {
+        "id": "P15_ValueHigh",
+        "dimensions": {
+          "w": 3,
+          "l": 3,
+          "h": 2
+        },
+        "value": 150.0,
+        "weight": 40.0,
+        "is_fragile": false,
+        "eta": 1
+      }
+    ]
+  },
+  "initial_coordinate_map": [
+    [
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          null
+        ],
+        [
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          null
+        ],
+        [
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          null
+        ],
+        [
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          null
+        ],
+        [
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          null
+        ],
+        [
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          null
+        ],
+        [
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          null
+        ],
+        [
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          null
+        ],
+        [
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "P12_Small2",
+          "P12_Small2",
+          null,
+          null,
+          null
+        ],
+        [
+          "P12_Small2",
+          "P12_Small2",
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ]
+    ],
+    [
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3",
+          null,
+          null
+        ],
+        [
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3",
+          null,
+          null
+        ],
+        [
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "P02_Fragile1",
+          "P03_Heavy1",
+          "P03_Heavy1",
+          "P03_Heavy1"
+        ],
+        [
+          "P01_Small",
+          "P01_Small",
+          "P02_Fragile1",
+          "P03_Heavy1",
+          "P03_Heavy1",
+          "P03_Heavy1"
+        ],
+        [
+          "P01_Small",
+          "P01_Small",
+          "P05_Fragile2",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "P05_Fragile2",
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3",
+          null,
+          null
+        ],
+        [
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3",
+          null,
+          null
+        ],
+        [
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "P02_Fragile1",
+          "P03_Heavy1",
+          "P03_Heavy1",
+          "P03_Heavy1"
+        ],
+        [
+          "P01_Small",
+          "P01_Small",
+          "P02_Fragile1",
+          "P03_Heavy1",
+          "P03_Heavy1",
+          "P03_Heavy1"
+        ],
+        [
+          "P01_Small",
+          "P01_Small",
+          "P05_Fragile2",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "P05_Fragile2",
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "P02_Fragile1",
+          "P03_Heavy1",
+          "P03_Heavy1",
+          "P03_Heavy1"
+        ],
+        [
+          null,
+          null,
+          "P02_Fragile1",
+          "P03_Heavy1",
+          "P03_Heavy1",
+          "P03_Heavy1"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ]
+    ],
+    [
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "P13_Fragile4",
+          "P13_Fragile4",
+          null,
+          null,
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "P07_Long",
+          "P07_Long",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "P13_Fragile4",
+          "P13_Fragile4",
+          null,
+          null,
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "P07_Long",
+          "P07_Long",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "P13_Fragile4",
+          "P13_Fragile4",
+          null,
+          null,
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "P07_Long",
+          "P07_Long",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "P07_Long",
+          "P07_Long",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "P07_Long",
+          "P07_Long",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ]
+    ]
+  ],
+  "final_coordinate_map": [
+    [
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          null
+        ],
+        [
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          null
+        ],
+        [
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          null
+        ],
+        [
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          null
+        ],
+        [
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          null
+        ],
+        [
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          null
+        ],
+        [
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          null
+        ],
+        [
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          null
+        ],
+        [
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          "P11_Big2",
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ]
+    ],
+    [
+      [
+        [
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3",
+          null,
+          null
+        ],
+        [
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3",
+          null,
+          null
+        ],
+        [
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "P03_Heavy1",
+          "P03_Heavy1",
+          "P03_Heavy1",
+          null,
+          null,
+          null
+        ],
+        [
+          "P03_Heavy1",
+          "P03_Heavy1",
+          "P03_Heavy1",
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3",
+          null,
+          null
+        ],
+        [
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3",
+          null,
+          null
+        ],
+        [
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "P03_Heavy1",
+          "P03_Heavy1",
+          "P03_Heavy1",
+          null,
+          null,
+          null
+        ],
+        [
+          "P03_Heavy1",
+          "P03_Heavy1",
+          "P03_Heavy1",
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          "P05_Fragile2",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "P05_Fragile2",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "P03_Heavy1",
+          "P03_Heavy1",
+          "P03_Heavy1",
+          null,
+          null,
+          null
+        ],
+        [
+          "P03_Heavy1",
+          "P03_Heavy1",
+          "P03_Heavy1",
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          "P05_Fragile2",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "P05_Fragile2",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ]
+    ],
+    [
+      [
+        [
+          "P02_Fragile1",
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P07_Long",
+          "P07_Long"
+        ],
+        [
+          "P02_Fragile1",
+          null,
+          null,
+          null,
+          null,
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          null
+        ],
+        [
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium",
+          null,
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          null
+        ],
+        [
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P09_Fragile3",
+          "P09_Fragile3",
+          "P09_Fragile3"
+        ],
+        [
+          null,
+          "P13_Fragile4",
+          "P13_Fragile4",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "P06_Big1",
+          "P06_Big1",
+          "P06_Big1",
+          "P06_Big1",
+          "P10_Medium2",
+          "P10_Medium2",
+          "P08_Heavy2",
+          "P08_Heavy2"
+        ],
+        [
+          "P06_Big1",
+          "P06_Big1",
+          "P06_Big1",
+          "P06_Big1",
+          "P10_Medium2",
+          "P10_Medium2",
+          "P08_Heavy2",
+          "P08_Heavy2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          "P10_Medium2",
+          "P10_Medium2",
+          "P08_Heavy2",
+          "P08_Heavy2"
+        ]
+      ],
+      [
+        [
+          "P02_Fragile1",
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P07_Long",
+          "P07_Long"
+        ],
+        [
+          "P02_Fragile1",
+          null,
+          null,
+          null,
+          null,
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          null
+        ],
+        [
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium",
+          null,
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          null
+        ],
+        [
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P09_Fragile3",
+          "P09_Fragile3",
+          "P09_Fragile3"
+        ],
+        [
+          null,
+          "P13_Fragile4",
+          "P13_Fragile4",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "P06_Big1",
+          "P06_Big1",
+          "P06_Big1",
+          "P06_Big1",
+          "P10_Medium2",
+          "P10_Medium2",
+          "P08_Heavy2",
+          "P08_Heavy2"
+        ],
+        [
+          "P06_Big1",
+          "P06_Big1",
+          "P06_Big1",
+          "P06_Big1",
+          "P10_Medium2",
+          "P10_Medium2",
+          "P08_Heavy2",
+          "P08_Heavy2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          "P10_Medium2",
+          "P10_Medium2",
+          "P08_Heavy2",
+          "P08_Heavy2"
+        ]
+      ],
+      [
+        [
+          "P02_Fragile1",
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P07_Long",
+          "P07_Long"
+        ],
+        [
+          "P02_Fragile1",
+          null,
+          null,
+          null,
+          null,
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          null
+        ],
+        [
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium",
+          null,
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          null
+        ],
+        [
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P09_Fragile3",
+          "P09_Fragile3",
+          "P09_Fragile3"
+        ],
+        [
+          null,
+          "P13_Fragile4",
+          "P13_Fragile4",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "P06_Big1",
+          "P06_Big1",
+          "P06_Big1",
+          "P06_Big1",
+          "P10_Medium2",
+          "P10_Medium2",
+          "P08_Heavy2",
+          "P08_Heavy2"
+        ],
+        [
+          "P06_Big1",
+          "P06_Big1",
+          "P06_Big1",
+          "P06_Big1",
+          "P10_Medium2",
+          "P10_Medium2",
+          "P08_Heavy2",
+          "P08_Heavy2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          "P10_Medium2",
+          "P10_Medium2",
+          "P08_Heavy2",
+          "P08_Heavy2"
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P07_Long",
+          "P07_Long"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "P01_Small",
+          "P01_Small",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "P01_Small",
+          "P01_Small",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "P12_Small2",
+          "P12_Small2",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "P12_Small2",
+          "P12_Small2",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "P06_Big1",
+          "P06_Big1",
+          "P06_Big1",
+          "P06_Big1",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "P06_Big1",
+          "P06_Big1",
+          "P06_Big1",
+          "P06_Big1",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P07_Long",
+          "P07_Long"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "P01_Small",
+          "P01_Small",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "P01_Small",
+          "P01_Small",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ]
+    ]
+  ]
+}

@@ -1,0 +1,7164 @@
+{
+  "schema_version": 2,
+  "algorithm": "ga",
+  "parameters": {
+    "population_size": 20,
+    "max_iterations": 50,
+    "objective": "value"
+  },
+  "seed": 11,
+  "initial_state": {
+    "placements": {
+      "P01_Small": {
+        "position": [
+          0,
+          8,
+          0
+        ],
+        "orientation": [
+          "x",
+          "y",
+          "z"
+        ],
+        "truck_index": 2,
+        "inside": true
+      },
+      "P02_Fragile1": {
+        "position": [
+          3,
+          3,
+          0
+        ],
+        "orientation": [
+          "x",
+          "y",
+          "z"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "P03_Heavy1": {
+        "position": [
+          0,
+          4,
+          0
+        ],
+        "orientation": [
+          "x",
+          "z",
+          "y"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "P04_Medium": {
+        "position": [
+          2,
+          3,
+          0
+        ],
+        "orientation": [
+          "z",
+          "x",
+          "y"
+        ],
+        "truck_index": 1,
+        "inside": true
+      },
+      "P05_Fragile2": {
+        "position": [
+          0,
+          4,
+          0
+        ],
+        "orientation": [
+          "z",
+          "x",
+          "y"
+        ],
+        "truck_index": 1,
+        "inside": true
+      },
+      "P06_Big1": {
+        "position": [
+          39,
+          0,
+          0
+        ],
+        "orientation": [
+          "x",
+          "y",
+          "z"
+        ],
+        "truck_index": null,
+        "inside": false
+      },
+      "P07_Long": {
+        "position": [
+          2,
+          2,
+          3
+        ],
+        "orientation": [
+          "x",
+          "y",
+          "z"
+        ],
+        "truck_index": 1,
+        "inside": true
+      },
+      "P08_Heavy2": {
+        "position": [
+          0,
+          1,
+          0
+        ],
+        "orientation": [
+          "z",
+          "x",
+          "y"
+        ],
+        "truck_index": 1,
+        "inside": true
+      },
+      "P09_Fragile3": {
+        "position": [
+          1,
+          3,
+          0
+        ],
+        "orientation": [
+          "y",
+          "x",
+          "z"
+        ],
+        "truck_index": 2,
+        "inside": true
+      },
+      "P10_Medium2": {
+        "position": [
+          3,
+          5,
+          0
+        ],
+        "orientation": [
+          "y",
+          "z",
+          "x"
+        ],
+        "truck_index": 1,
+        "inside": true
+      },
+      "P11_Big2": {
+        "position": [
+          6,
+          1,
+          0
+        ],
+        "orientation": [
+          "y",
+          "z",
+          "x"
+        ],
+        "truck_index": 2,
+        "inside": true
+      },
+      "P12_Small2": {
+        "position": [
+          0,
+          1,
+          0
+        ],
+        "orientation": [
+          "z",
+          "x",
+          "y"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "P13_Fragile4": {
+        "position": [
+          1,
+          0,
+          2
+        ],
+        "orientation": [
+          "x",
+          "y",
+          "z"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "P14_Heavy3": {
+        "position": [
+          5,
+          6,
+          0
+        ],
+        "orientation": [
+          "x",
+          "z",
+          "y"
+        ],
+        "truck_index": 2,
+        "inside": true
+      },
+      "P15_ValueHigh": {
+        "position": [
+          0,
+          5,
+          0
+        ],
+        "orientation": [
+          "z",
+          "x",
+          "y"
+        ],
+        "truck_index": 1,
+        "inside": true
+      }
+    }
+  },
+  "final_state": {
+    "placements": {
+      "P01_Small": {
+        "position": [
+          0,
+          8,
+          0
+        ],
+        "orientation": [
+          "x",
+          "y",
+          "z"
+        ],
+        "truck_index": 2,
+        "inside": true
+      },
+      "P02_Fragile1": {
+        "position": [
+          3,
+          3,
+          0
+        ],
+        "orientation": [
+          "x",
+          "y",
+          "z"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "P03_Heavy1": {
+        "position": [
+          0,
+          4,
+          0
+        ],
+        "orientation": [
+          "x",
+          "z",
+          "y"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "P04_Medium": {
+        "position": [
+          2,
+          3,
+          0
+        ],
+        "orientation": [
+          "z",
+          "x",
+          "y"
+        ],
+        "truck_index": 1,
+        "inside": true
+      },
+      "P05_Fragile2": {
+        "position": [
+          0,
+          4,
+          0
+        ],
+        "orientation": [
+          "z",
+          "x",
+          "y"
+        ],
+        "truck_index": 1,
+        "inside": true
+      },
+      "P06_Big1": {
+        "position": [
+          39,
+          0,
+          0
+        ],
+        "orientation": [
+          "x",
+          "y",
+          "z"
+        ],
+        "truck_index": null,
+        "inside": false
+      },
+      "P07_Long": {
+        "position": [
+          2,
+          2,
+          3
+        ],
+        "orientation": [
+          "x",
+          "y",
+          "z"
+        ],
+        "truck_index": 1,
+        "inside": true
+      },
+      "P08_Heavy2": {
+        "position": [
+          0,
+          1,
+          0
+        ],
+        "orientation": [
+          "z",
+          "x",
+          "y"
+        ],
+        "truck_index": 1,
+        "inside": true
+      },
+      "P09_Fragile3": {
+        "position": [
+          1,
+          3,
+          0
+        ],
+        "orientation": [
+          "y",
+          "x",
+          "z"
+        ],
+        "truck_index": 2,
+        "inside": true
+      },
+      "P10_Medium2": {
+        "position": [
+          3,
+          5,
+          0
+        ],
+        "orientation": [
+          "y",
+          "z",
+          "x"
+        ],
+        "truck_index": 1,
+        "inside": true
+      },
+      "P11_Big2": {
+        "position": [
+          6,
+          1,
+          0
+        ],
+        "orientation": [
+          "y",
+          "z",
+          "x"
+        ],
+        "truck_index": 2,
+        "inside": true
+      },
+      "P12_Small2": {
+        "position": [
+          0,
+          1,
+          0
+        ],
+        "orientation": [
+          "z",
+          "x",
+          "y"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "P13_Fragile4": {
+        "position": [
+          1,
+          0,
+          2
+        ],
+        "orientation": [
+          "x",
+          "y",
+          "z"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "P14_Heavy3": {
+        "position": [
+          5,
+          6,
+          0
+        ],
+        "orientation": [
+          "x",
+          "z",
+          "y"
+        ],
+        "truck_index": 2,
+        "inside": true
+      },
+      "P15_ValueHigh": {
+        "position": [
+          0,
+          5,
+          0
+        ],
+        "orientation": [
+          "z",
+          "x",
+          "y"
+        ],
+        "truck_index": 1,
+        "inside": true
+      }
+    }
+  },
+  "final_objective": 1175.0,
+  "duration_seconds": 2.3507037999952445,
+  "iterations": 50,
+  "history": [
+    {
+      "iteration": 0,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 819.75
+    },
+    {
+      "iteration": 1,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 701.75
+    },
+    {
+      "iteration": 2,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 706.5
+    },
+    {
+      "iteration": 3,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 725.0
+    },
+    {
+      "iteration": 4,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 684.5
+    },
+    {
+      "iteration": 5,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 794.75
+    },
+    {
+      "iteration": 6,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 873.75
+    },
+    {
+      "iteration": 7,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 911.5
+    },
+    {
+      "iteration": 8,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 963.25
+    },
+    {
+      "iteration": 9,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 963.5
+    },
+    {
+      "iteration": 10,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 965.0
+    },
+    {
+      "iteration": 11,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 928.75
+    },
+    {
+      "iteration": 12,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 875.5
+    },
+    {
+      "iteration": 13,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 815.5
+    },
+    {
+      "iteration": 14,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 816.75
+    },
+    {
+      "iteration": 15,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 771.0
+    },
+    {
+      "iteration": 16,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 735.5
+    },
+    {
+      "iteration": 17,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 749.0
+    },
+    {
+      "iteration": 18,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 764.0
+    },
+    {
+      "iteration": 19,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 747.75
+    },
+    {
+      "iteration": 20,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 787.0
+    },
+    {
+      "iteration": 21,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 848.5
+    },
+    {
+      "iteration": 22,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 916.0
+    },
+    {
+      "iteration": 23,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 960.0
+    },
+    {
+      "iteration": 24,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 937.5
+    },
+    {
+      "iteration": 25,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 875.5
+    },
+    {
+      "iteration": 26,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 951.75
+    },
+    {
+      "iteration": 27,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 1022.25
+    },
+    {
+      "iteration": 28,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 995.0
+    },
+    {
+      "iteration": 29,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 1068.25
+    },
+    {
+      "iteration": 30,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 1075.0
+    },
+    {
+      "iteration": 31,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 1107.5
+    },
+    {
+      "iteration": 32,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 1092.5
+    },
+    {
+      "iteration": 33,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 1120.5
+    },
+    {
+      "iteration": 34,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 1095.25
+    },
+    {
+      "iteration": 35,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 1087.0
+    },
+    {
+      "iteration": 36,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 1119.75
+    },
+    {
+      "iteration": 37,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 1119.0
+    },
+    {
+      "iteration": 38,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 1150.75
+    },
+    {
+      "iteration": 39,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 1158.5
+    },
+    {
+      "iteration": 40,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 1164.25
+    },
+    {
+      "iteration": 41,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 1156.25
+    },
+    {
+      "iteration": 42,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 1161.25
+    },
+    {
+      "iteration": 43,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 1150.75
+    },
+    {
+      "iteration": 44,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 1138.25
+    },
+    {
+      "iteration": 45,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 1131.0
+    },
+    {
+      "iteration": 46,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 1135.0
+    },
+    {
+      "iteration": 47,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 1136.25
+    },
+    {
+      "iteration": 48,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 1138.0
+    },
+    {
+      "iteration": 49,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 1131.25
+    },
+    {
+      "iteration": 50,
+      "objective": 1175.0,
+      "max_objective": 1175.0,
+      "mean_objective": 1131.0
+    }
+  ],
+  "initial_population": [
+    {
+      "placements": {
+        "P01_Small": {
+          "position": [
+            9,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P02_Fragile1": {
+          "position": [
+            0,
+            5,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P03_Heavy1": {
+          "position": [
+            0,
+            3,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P04_Medium": {
+          "position": [
+            3,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P05_Fragile2": {
+          "position": [
+            5,
+            1,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P06_Big1": {
+          "position": [
+            39,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P07_Long": {
+          "position": [
+            0,
+            3,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P08_Heavy2": {
+          "position": [
+            3,
+            4,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P09_Fragile3": {
+          "position": [
+            57,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P10_Medium2": {
+          "position": [
+            3,
+            3,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P11_Big2": {
+          "position": [
+            1,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P12_Small2": {
+          "position": [
+            75,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P13_Fragile4": {
+          "position": [
+            1,
+            5,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P14_Heavy3": {
+          "position": [
+            87,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P15_ValueHigh": {
+          "position": [
+            0,
+            2,
+            2
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": 2,
+          "inside": true
+        }
+      }
+    },
+    {
+      "placements": {
+        "P01_Small": {
+          "position": [
+            9,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P02_Fragile1": {
+          "position": [
+            15,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P03_Heavy1": {
+          "position": [
+            21,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P04_Medium": {
+          "position": [
+            1,
+            1,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P05_Fragile2": {
+          "position": [
+            0,
+            1,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P06_Big1": {
+          "position": [
+            39,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P07_Long": {
+          "position": [
+            0,
+            4,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P08_Heavy2": {
+          "position": [
+            5,
+            1,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P09_Fragile3": {
+          "position": [
+            7,
+            6,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P10_Medium2": {
+          "position": [
+            0,
+            5,
+            0
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P11_Big2": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P12_Small2": {
+          "position": [
+            4,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P13_Fragile4": {
+          "position": [
+            3,
+            4,
+            0
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P14_Heavy3": {
+          "position": [
+            3,
+            3,
+            0
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P15_ValueHigh": {
+          "position": [
+            93,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        }
+      }
+    },
+    {
+      "placements": {
+        "P01_Small": {
+          "position": [
+            5,
+            8,
+            0
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P02_Fragile1": {
+          "position": [
+            2,
+            1,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P03_Heavy1": {
+          "position": [
+            3,
+            5,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P04_Medium": {
+          "position": [
+            27,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P05_Fragile2": {
+          "position": [
+            33,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P06_Big1": {
+          "position": [
+            1,
+            1,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P07_Long": {
+          "position": [
+            0,
+            4,
+            3
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P08_Heavy2": {
+          "position": [
+            0,
+            1,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P09_Fragile3": {
+          "position": [
+            57,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P10_Medium2": {
+          "position": [
+            2,
+            3,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P11_Big2": {
+          "position": [
+            0,
+            2,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P12_Small2": {
+          "position": [
+            5,
+            1,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P13_Fragile4": {
+          "position": [
+            81,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P14_Heavy3": {
+          "position": [
+            1,
+            7,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P15_ValueHigh": {
+          "position": [
+            1,
+            4,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": 0,
+          "inside": true
+        }
+      }
+    },
+    {
+      "placements": {
+        "P01_Small": {
+          "position": [
+            2,
+            2,
+            0
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P02_Fragile1": {
+          "position": [
+            1,
+            4,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P03_Heavy1": {
+          "position": [
+            0,
+            5,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P04_Medium": {
+          "position": [
+            27,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P05_Fragile2": {
+          "position": [
+            0,
+            1,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P06_Big1": {
+          "position": [
+            39,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P07_Long": {
+          "position": [
+            45,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P08_Heavy2": {
+          "position": [
+            6,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P09_Fragile3": {
+          "position": [
+            5,
+            2,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P10_Medium2": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P11_Big2": {
+          "position": [
+            0,
+            2,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P12_Small2": {
+          "position": [
+            0,
+            8,
+            2
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P13_Fragile4": {
+          "position": [
+            81,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P14_Heavy3": {
+          "position": [
+            0,
+            7,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P15_ValueHigh": {
+          "position": [
+            5,
+            6,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 2,
+          "inside": true
+        }
+      }
+    },
+    {
+      "placements": {
+        "P01_Small": {
+          "position": [
+            2,
+            2,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P02_Fragile1": {
+          "position": [
+            3,
+            2,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P03_Heavy1": {
+          "position": [
+            1,
+            6,
+            2
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P04_Medium": {
+          "position": [
+            4,
+            4,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P05_Fragile2": {
+          "position": [
+            33,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P06_Big1": {
+          "position": [
+            39,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P07_Long": {
+          "position": [
+            0,
+            7,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P08_Heavy2": {
+          "position": [
+            2,
+            1,
+            2
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P09_Fragile3": {
+          "position": [
+            57,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P10_Medium2": {
+          "position": [
+            4,
+            6,
+            2
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P11_Big2": {
+          "position": [
+            3,
+            8,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P12_Small2": {
+          "position": [
+            2,
+            1,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P13_Fragile4": {
+          "position": [
+            81,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P14_Heavy3": {
+          "position": [
+            87,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P15_ValueHigh": {
+          "position": [
+            93,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        }
+      }
+    },
+    {
+      "placements": {
+        "P01_Small": {
+          "position": [
+            5,
+            3,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P02_Fragile1": {
+          "position": [
+            15,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P03_Heavy1": {
+          "position": [
+            1,
+            3,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P04_Medium": {
+          "position": [
+            27,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P05_Fragile2": {
+          "position": [
+            3,
+            4,
+            2
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P06_Big1": {
+          "position": [
+            39,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P07_Long": {
+          "position": [
+            0,
+            5,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P08_Heavy2": {
+          "position": [
+            51,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P09_Fragile3": {
+          "position": [
+            57,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P10_Medium2": {
+          "position": [
+            63,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P11_Big2": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P12_Small2": {
+          "position": [
+            75,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P13_Fragile4": {
+          "position": [
+            81,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P14_Heavy3": {
+          "position": [
+            0,
+            2,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P15_ValueHigh": {
+          "position": [
+            93,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": null,
+          "inside": false
+        }
+      }
+    },
+    {
+      "placements": {
+        "P01_Small": {
+          "position": [
+            3,
+            3,
+            0
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P02_Fragile1": {
+          "position": [
+            2,
+            6,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P03_Heavy1": {
+          "position": [
+            21,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P04_Medium": {
+          "position": [
+            0,
+            5,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P05_Fragile2": {
+          "position": [
+            4,
+            3,
+            2
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P06_Big1": {
+          "position": [
+            3,
+            4,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P07_Long": {
+          "position": [
+            4,
+            0,
+            3
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P08_Heavy2": {
+          "position": [
+            2,
+            1,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P09_Fragile3": {
+          "position": [
+            57,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P10_Medium2": {
+          "position": [
+            2,
+            4,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P11_Big2": {
+          "position": [
+            69,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P12_Small2": {
+          "position": [
+            2,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P13_Fragile4": {
+          "position": [
+            0,
+            4,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P14_Heavy3": {
+          "position": [
+            3,
+            6,
+            2
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P15_ValueHigh": {
+          "position": [
+            93,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": null,
+          "inside": false
+        }
+      }
+    },
+    {
+      "placements": {
+        "P01_Small": {
+          "position": [
+            2,
+            5,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P02_Fragile1": {
+          "position": [
+            4,
+            4,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P03_Heavy1": {
+          "position": [
+            2,
+            5,
+            2
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P04_Medium": {
+          "position": [
+            27,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P05_Fragile2": {
+          "position": [
+            1,
+            6,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P06_Big1": {
+          "position": [
+            39,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P07_Long": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P08_Heavy2": {
+          "position": [
+            4,
+            7,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P09_Fragile3": {
+          "position": [
+            4,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P10_Medium2": {
+          "position": [
+            1,
+            2,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P11_Big2": {
+          "position": [
+            1,
+            2,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P12_Small2": {
+          "position": [
+            75,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P13_Fragile4": {
+          "position": [
+            81,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P14_Heavy3": {
+          "position": [
+            2,
+            2,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P15_ValueHigh": {
+          "position": [
+            2,
+            6,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 2,
+          "inside": true
+        }
+      }
+    },
+    {
+      "placements": {
+        "P01_Small": {
+          "position": [
+            0,
+            4,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P02_Fragile1": {
+          "position": [
+            2,
+            1,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P03_Heavy1": {
+          "position": [
+            1,
+            5,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P04_Medium": {
+          "position": [
+            27,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P05_Fragile2": {
+          "position": [
+            5,
+            7,
+            0
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P06_Big1": {
+          "position": [
+            4,
+            3,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P07_Long": {
+          "position": [
+            45,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P08_Heavy2": {
+          "position": [
+            51,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P09_Fragile3": {
+          "position": [
+            57,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P10_Medium2": {
+          "position": [
+            63,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P11_Big2": {
+          "position": [
+            69,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P12_Small2": {
+          "position": [
+            5,
+            2,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P13_Fragile4": {
+          "position": [
+            4,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P14_Heavy3": {
+          "position": [
+            87,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P15_ValueHigh": {
+          "position": [
+            93,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": null,
+          "inside": false
+        }
+      }
+    },
+    {
+      "placements": {
+        "P01_Small": {
+          "position": [
+            9,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P02_Fragile1": {
+          "position": [
+            4,
+            4,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P03_Heavy1": {
+          "position": [
+            4,
+            3,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P04_Medium": {
+          "position": [
+            2,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P05_Fragile2": {
+          "position": [
+            1,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P06_Big1": {
+          "position": [
+            0,
+            3,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P07_Long": {
+          "position": [
+            45,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P08_Heavy2": {
+          "position": [
+            51,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P09_Fragile3": {
+          "position": [
+            4,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P10_Medium2": {
+          "position": [
+            2,
+            6,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P11_Big2": {
+          "position": [
+            69,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P12_Small2": {
+          "position": [
+            1,
+            2,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P13_Fragile4": {
+          "position": [
+            0,
+            1,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P14_Heavy3": {
+          "position": [
+            0,
+            1,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P15_ValueHigh": {
+          "position": [
+            6,
+            7,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 2,
+          "inside": true
+        }
+      }
+    },
+    {
+      "placements": {
+        "P01_Small": {
+          "position": [
+            9,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P02_Fragile1": {
+          "position": [
+            4,
+            6,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P03_Heavy1": {
+          "position": [
+            21,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P04_Medium": {
+          "position": [
+            0,
+            8,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P05_Fragile2": {
+          "position": [
+            33,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P06_Big1": {
+          "position": [
+            0,
+            1,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P07_Long": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P08_Heavy2": {
+          "position": [
+            51,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P09_Fragile3": {
+          "position": [
+            57,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P10_Medium2": {
+          "position": [
+            3,
+            1,
+            0
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P11_Big2": {
+          "position": [
+            69,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P12_Small2": {
+          "position": [
+            75,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P13_Fragile4": {
+          "position": [
+            81,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P14_Heavy3": {
+          "position": [
+            2,
+            2,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P15_ValueHigh": {
+          "position": [
+            2,
+            3,
+            0
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": 0,
+          "inside": true
+        }
+      }
+    },
+    {
+      "placements": {
+        "P01_Small": {
+          "position": [
+            0,
+            2,
+            0
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P02_Fragile1": {
+          "position": [
+            3,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P03_Heavy1": {
+          "position": [
+            2,
+            7,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P04_Medium": {
+          "position": [
+            1,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P05_Fragile2": {
+          "position": [
+            5,
+            6,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P06_Big1": {
+          "position": [
+            3,
+            3,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P07_Long": {
+          "position": [
+            1,
+            7,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P08_Heavy2": {
+          "position": [
+            0,
+            5,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P09_Fragile3": {
+          "position": [
+            57,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P10_Medium2": {
+          "position": [
+            2,
+            4,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P11_Big2": {
+          "position": [
+            6,
+            2,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P12_Small2": {
+          "position": [
+            75,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P13_Fragile4": {
+          "position": [
+            1,
+            2,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P14_Heavy3": {
+          "position": [
+            0,
+            2,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P15_ValueHigh": {
+          "position": [
+            93,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        }
+      }
+    },
+    {
+      "placements": {
+        "P01_Small": {
+          "position": [
+            9,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P02_Fragile1": {
+          "position": [
+            2,
+            2,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P03_Heavy1": {
+          "position": [
+            21,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P04_Medium": {
+          "position": [
+            27,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P05_Fragile2": {
+          "position": [
+            1,
+            1,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P06_Big1": {
+          "position": [
+            2,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P07_Long": {
+          "position": [
+            4,
+            1,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P08_Heavy2": {
+          "position": [
+            51,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P09_Fragile3": {
+          "position": [
+            3,
+            3,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P10_Medium2": {
+          "position": [
+            63,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P11_Big2": {
+          "position": [
+            0,
+            6,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P12_Small2": {
+          "position": [
+            3,
+            4,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P13_Fragile4": {
+          "position": [
+            3,
+            1,
+            2
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P14_Heavy3": {
+          "position": [
+            2,
+            5,
+            0
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P15_ValueHigh": {
+          "position": [
+            1,
+            3,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 1,
+          "inside": true
+        }
+      }
+    },
+    {
+      "placements": {
+        "P01_Small": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P02_Fragile1": {
+          "position": [
+            5,
+            1,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P03_Heavy1": {
+          "position": [
+            3,
+            4,
+            0
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P04_Medium": {
+          "position": [
+            27,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P05_Fragile2": {
+          "position": [
+            3,
+            4,
+            2
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P06_Big1": {
+          "position": [
+            39,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P07_Long": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P08_Heavy2": {
+          "position": [
+            2,
+            4,
+            2
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P09_Fragile3": {
+          "position": [
+            2,
+            7,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P10_Medium2": {
+          "position": [
+            63,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P11_Big2": {
+          "position": [
+            69,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P12_Small2": {
+          "position": [
+            75,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P13_Fragile4": {
+          "position": [
+            2,
+            3,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P14_Heavy3": {
+          "position": [
+            2,
+            3,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P15_ValueHigh": {
+          "position": [
+            0,
+            0,
+            1
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 0,
+          "inside": true
+        }
+      }
+    },
+    {
+      "placements": {
+        "P01_Small": {
+          "position": [
+            6,
+            8,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P02_Fragile1": {
+          "position": [
+            15,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P03_Heavy1": {
+          "position": [
+            0,
+            4,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P04_Medium": {
+          "position": [
+            0,
+            6,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P05_Fragile2": {
+          "position": [
+            33,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P06_Big1": {
+          "position": [
+            5,
+            1,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P07_Long": {
+          "position": [
+            45,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P08_Heavy2": {
+          "position": [
+            5,
+            6,
+            2
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P09_Fragile3": {
+          "position": [
+            5,
+            2,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P10_Medium2": {
+          "position": [
+            2,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P11_Big2": {
+          "position": [
+            2,
+            4,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P12_Small2": {
+          "position": [
+            2,
+            3,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P13_Fragile4": {
+          "position": [
+            3,
+            1,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P14_Heavy3": {
+          "position": [
+            87,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P15_ValueHigh": {
+          "position": [
+            2,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": 0,
+          "inside": true
+        }
+      }
+    },
+    {
+      "placements": {
+        "P01_Small": {
+          "position": [
+            1,
+            4,
+            2
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P02_Fragile1": {
+          "position": [
+            2,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P03_Heavy1": {
+          "position": [
+            21,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P04_Medium": {
+          "position": [
+            0,
+            1,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P05_Fragile2": {
+          "position": [
+            33,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P06_Big1": {
+          "position": [
+            39,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P07_Long": {
+          "position": [
+            45,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P08_Heavy2": {
+          "position": [
+            0,
+            3,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P09_Fragile3": {
+          "position": [
+            57,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P10_Medium2": {
+          "position": [
+            63,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P11_Big2": {
+          "position": [
+            2,
+            5,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P12_Small2": {
+          "position": [
+            3,
+            2,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P13_Fragile4": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P14_Heavy3": {
+          "position": [
+            87,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P15_ValueHigh": {
+          "position": [
+            93,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        }
+      }
+    },
+    {
+      "placements": {
+        "P01_Small": {
+          "position": [
+            0,
+            8,
+            0
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P02_Fragile1": {
+          "position": [
+            3,
+            3,
+            0
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P03_Heavy1": {
+          "position": [
+            0,
+            4,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P04_Medium": {
+          "position": [
+            2,
+            3,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P05_Fragile2": {
+          "position": [
+            0,
+            4,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P06_Big1": {
+          "position": [
+            39,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P07_Long": {
+          "position": [
+            2,
+            2,
+            3
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P08_Heavy2": {
+          "position": [
+            0,
+            1,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P09_Fragile3": {
+          "position": [
+            1,
+            3,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P10_Medium2": {
+          "position": [
+            3,
+            5,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P11_Big2": {
+          "position": [
+            6,
+            1,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P12_Small2": {
+          "position": [
+            0,
+            1,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P13_Fragile4": {
+          "position": [
+            1,
+            0,
+            2
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P14_Heavy3": {
+          "position": [
+            5,
+            6,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P15_ValueHigh": {
+          "position": [
+            0,
+            5,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 1,
+          "inside": true
+        }
+      }
+    },
+    {
+      "placements": {
+        "P01_Small": {
+          "position": [
+            2,
+            1,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P02_Fragile1": {
+          "position": [
+            2,
+            1,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P03_Heavy1": {
+          "position": [
+            21,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P04_Medium": {
+          "position": [
+            0,
+            3,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P05_Fragile2": {
+          "position": [
+            4,
+            7,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P06_Big1": {
+          "position": [
+            2,
+            4,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P07_Long": {
+          "position": [
+            45,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P08_Heavy2": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P09_Fragile3": {
+          "position": [
+            57,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P10_Medium2": {
+          "position": [
+            4,
+            6,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P11_Big2": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P12_Small2": {
+          "position": [
+            2,
+            4,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P13_Fragile4": {
+          "position": [
+            6,
+            2,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P14_Heavy3": {
+          "position": [
+            3,
+            1,
+            2
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P15_ValueHigh": {
+          "position": [
+            93,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        }
+      }
+    },
+    {
+      "placements": {
+        "P01_Small": {
+          "position": [
+            1,
+            5,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P02_Fragile1": {
+          "position": [
+            3,
+            3,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P03_Heavy1": {
+          "position": [
+            4,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P04_Medium": {
+          "position": [
+            3,
+            6,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P05_Fragile2": {
+          "position": [
+            4,
+            2,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P06_Big1": {
+          "position": [
+            4,
+            4,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P07_Long": {
+          "position": [
+            4,
+            1,
+            3
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P08_Heavy2": {
+          "position": [
+            51,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P09_Fragile3": {
+          "position": [
+            0,
+            2,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P10_Medium2": {
+          "position": [
+            63,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P11_Big2": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P12_Small2": {
+          "position": [
+            75,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P13_Fragile4": {
+          "position": [
+            0,
+            7,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P14_Heavy3": {
+          "position": [
+            1,
+            1,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P15_ValueHigh": {
+          "position": [
+            93,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": null,
+          "inside": false
+        }
+      }
+    },
+    {
+      "placements": {
+        "P01_Small": {
+          "position": [
+            9,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "y",
+            "z"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P02_Fragile1": {
+          "position": [
+            15,
+            0,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P03_Heavy1": {
+          "position": [
+            2,
+            2,
+            0
+          ],
+          "orientation": [
+            "x",
+            "z",
+            "y"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P04_Medium": {
+          "position": [
+            4,
+            6,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P05_Fragile2": {
+          "position": [
+            33,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P06_Big1": {
+          "position": [
+            5,
+            1,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P07_Long": {
+          "position": [
+            45,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P08_Heavy2": {
+          "position": [
+            1,
+            3,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 1,
+          "inside": true
+        },
+        "P09_Fragile3": {
+          "position": [
+            1,
+            4,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": 0,
+          "inside": true
+        },
+        "P10_Medium2": {
+          "position": [
+            63,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P11_Big2": {
+          "position": [
+            69,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "y",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P12_Small2": {
+          "position": [
+            1,
+            6,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": 2,
+          "inside": true
+        },
+        "P13_Fragile4": {
+          "position": [
+            81,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "z",
+            "x"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P14_Heavy3": {
+          "position": [
+            87,
+            0,
+            0
+          ],
+          "orientation": [
+            "y",
+            "x",
+            "z"
+          ],
+          "truck_index": null,
+          "inside": false
+        },
+        "P15_ValueHigh": {
+          "position": [
+            93,
+            0,
+            0
+          ],
+          "orientation": [
+            "z",
+            "x",
+            "y"
+          ],
+          "truck_index": null,
+          "inside": false
+        }
+      }
+    }
+  ],
+  "stop_reason": "max_iterations",
+  "is_stub": false,
+  "metadata": {
+    "elitism": 1,
+    "crossover_rate": 0.8,
+    "mutation_rate": 0.2
+  },
+  "problem": {
+    "trucks": [
+      {
+        "dimensions": {
+          "w": 5,
+          "l": 6,
+          "h": 4
+        },
+        "max_capacity": 150.0
+      },
+      {
+        "dimensions": {
+          "w": 6,
+          "l": 8,
+          "h": 4
+        },
+        "max_capacity": 250.0
+      },
+      {
+        "dimensions": {
+          "w": 8,
+          "l": 10,
+          "h": 5
+        },
+        "max_capacity": 400.0
+      }
+    ],
+    "packages": [
+      {
+        "id": "P01_Small",
+        "dimensions": {
+          "w": 2,
+          "l": 2,
+          "h": 2
+        },
+        "value": 40.0,
+        "weight": 20.0,
+        "is_fragile": false,
+        "eta": 1
+      },
+      {
+        "id": "P02_Fragile1",
+        "dimensions": {
+          "w": 2,
+          "l": 3,
+          "h": 1
+        },
+        "value": 75.0,
+        "weight": 10.0,
+        "is_fragile": true,
+        "eta": 2
+      },
+      {
+        "id": "P03_Heavy1",
+        "dimensions": {
+          "w": 3,
+          "l": 3,
+          "h": 2
+        },
+        "value": 60.0,
+        "weight": 80.0,
+        "is_fragile": false,
+        "eta": 4
+      },
+      {
+        "id": "P04_Medium",
+        "dimensions": {
+          "w": 3,
+          "l": 4,
+          "h": 2
+        },
+        "value": 90.0,
+        "weight": 35.0,
+        "is_fragile": false,
+        "eta": 2
+      },
+      {
+        "id": "P05_Fragile2",
+        "dimensions": {
+          "w": 2,
+          "l": 2,
+          "h": 1
+        },
+        "value": 85.0,
+        "weight": 12.0,
+        "is_fragile": true,
+        "eta": 1
+      },
+      {
+        "id": "P06_Big1",
+        "dimensions": {
+          "w": 4,
+          "l": 4,
+          "h": 2
+        },
+        "value": 110.0,
+        "weight": 70.0,
+        "is_fragile": false,
+        "eta": 3
+      },
+      {
+        "id": "P07_Long",
+        "dimensions": {
+          "w": 2,
+          "l": 5,
+          "h": 1
+        },
+        "value": 55.0,
+        "weight": 25.0,
+        "is_fragile": false,
+        "eta": 5
+      },
+      {
+        "id": "P08_Heavy2",
+        "dimensions": {
+          "w": 3,
+          "l": 3,
+          "h": 2
+        },
+        "value": 80.0,
+        "weight": 90.0,
+        "is_fragile": false,
+        "eta": 2
+      },
+      {
+        "id": "P09_Fragile3",
+        "dimensions": {
+          "w": 3,
+          "l": 3,
+          "h": 1
+        },
+        "value": 120.0,
+        "weight": 15.0,
+        "is_fragile": true,
+        "eta": 1
+      },
+      {
+        "id": "P10_Medium2",
+        "dimensions": {
+          "w": 3,
+          "l": 3,
+          "h": 2
+        },
+        "value": 65.0,
+        "weight": 30.0,
+        "is_fragile": false,
+        "eta": 3
+      },
+      {
+        "id": "P11_Big2",
+        "dimensions": {
+          "w": 4,
+          "l": 5,
+          "h": 2
+        },
+        "value": 130.0,
+        "weight": 75.0,
+        "is_fragile": false,
+        "eta": 4
+      },
+      {
+        "id": "P12_Small2",
+        "dimensions": {
+          "w": 2,
+          "l": 2,
+          "h": 1
+        },
+        "value": 30.0,
+        "weight": 10.0,
+        "is_fragile": false,
+        "eta": 2
+      },
+      {
+        "id": "P13_Fragile4",
+        "dimensions": {
+          "w": 2,
+          "l": 3,
+          "h": 1
+        },
+        "value": 95.0,
+        "weight": 14.0,
+        "is_fragile": true,
+        "eta": 1
+      },
+      {
+        "id": "P14_Heavy3",
+        "dimensions": {
+          "w": 3,
+          "l": 4,
+          "h": 2
+        },
+        "value": 100.0,
+        "weight": 110.0,
+        "is_fragile": false,
+        "eta": 3
+      },
+      {
+        "id": "P15_ValueHigh",
+        "dimensions": {
+          "w": 3,
+          "l": 3,
+          "h": 2
+        },
+        "value": 150.0,
+        "weight": 40.0,
+        "is_fragile": false,
+        "eta": 1
+      }
+    ]
+  },
+  "initial_coordinate_map": [
+    [
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "P12_Small2",
+          "P12_Small2",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "P02_Fragile1",
+          "P02_Fragile1"
+        ],
+        [
+          "P03_Heavy1",
+          "P03_Heavy1",
+          "P03_Heavy1",
+          "P02_Fragile1",
+          "P02_Fragile1"
+        ],
+        [
+          "P03_Heavy1",
+          "P03_Heavy1",
+          "P03_Heavy1",
+          "P02_Fragile1",
+          "P02_Fragile1"
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "P12_Small2",
+          "P12_Small2",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "P03_Heavy1",
+          "P03_Heavy1",
+          "P03_Heavy1",
+          null,
+          null
+        ],
+        [
+          "P03_Heavy1",
+          "P03_Heavy1",
+          "P03_Heavy1",
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          "P13_Fragile4",
+          "P13_Fragile4",
+          null,
+          null
+        ],
+        [
+          null,
+          "P13_Fragile4",
+          "P13_Fragile4",
+          null,
+          null
+        ],
+        [
+          null,
+          "P13_Fragile4",
+          "P13_Fragile4",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "P03_Heavy1",
+          "P03_Heavy1",
+          "P03_Heavy1",
+          null,
+          null
+        ],
+        [
+          "P03_Heavy1",
+          "P03_Heavy1",
+          "P03_Heavy1",
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ]
+    ],
+    [
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "P08_Heavy2",
+          "P08_Heavy2",
+          "P08_Heavy2",
+          null,
+          null,
+          null
+        ],
+        [
+          "P08_Heavy2",
+          "P08_Heavy2",
+          "P08_Heavy2",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium"
+        ],
+        [
+          "P05_Fragile2",
+          "P05_Fragile2",
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium"
+        ],
+        [
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          "P10_Medium2",
+          "P10_Medium2",
+          null
+        ],
+        [
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          "P10_Medium2",
+          "P10_Medium2",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "P10_Medium2",
+          "P10_Medium2",
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "P08_Heavy2",
+          "P08_Heavy2",
+          "P08_Heavy2",
+          null,
+          null,
+          null
+        ],
+        [
+          "P08_Heavy2",
+          "P08_Heavy2",
+          "P08_Heavy2",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium"
+        ],
+        [
+          "P05_Fragile2",
+          "P05_Fragile2",
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium"
+        ],
+        [
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          "P10_Medium2",
+          "P10_Medium2",
+          null
+        ],
+        [
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          "P10_Medium2",
+          "P10_Medium2",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "P10_Medium2",
+          "P10_Medium2",
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "P08_Heavy2",
+          "P08_Heavy2",
+          "P08_Heavy2",
+          null,
+          null,
+          null
+        ],
+        [
+          "P08_Heavy2",
+          "P08_Heavy2",
+          "P08_Heavy2",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium"
+        ],
+        [
+          null,
+          null,
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium"
+        ],
+        [
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          "P10_Medium2",
+          "P10_Medium2",
+          null
+        ],
+        [
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          "P10_Medium2",
+          "P10_Medium2",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "P10_Medium2",
+          "P10_Medium2",
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "P07_Long",
+          "P07_Long",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "P07_Long",
+          "P07_Long",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "P07_Long",
+          "P07_Long",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "P07_Long",
+          "P07_Long",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "P07_Long",
+          "P07_Long",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ]
+    ],
+    [
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          "P09_Fragile3",
+          "P09_Fragile3",
+          "P09_Fragile3",
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          "P09_Fragile3",
+          "P09_Fragile3",
+          "P09_Fragile3",
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          "P09_Fragile3",
+          "P09_Fragile3",
+          "P09_Fragile3",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3"
+        ],
+        [
+          "P01_Small",
+          "P01_Small",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "P01_Small",
+          "P01_Small",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3"
+        ],
+        [
+          "P01_Small",
+          "P01_Small",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "P01_Small",
+          "P01_Small",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ]
+    ]
+  ],
+  "final_coordinate_map": [
+    [
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "P12_Small2",
+          "P12_Small2",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "P02_Fragile1",
+          "P02_Fragile1"
+        ],
+        [
+          "P03_Heavy1",
+          "P03_Heavy1",
+          "P03_Heavy1",
+          "P02_Fragile1",
+          "P02_Fragile1"
+        ],
+        [
+          "P03_Heavy1",
+          "P03_Heavy1",
+          "P03_Heavy1",
+          "P02_Fragile1",
+          "P02_Fragile1"
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "P12_Small2",
+          "P12_Small2",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "P03_Heavy1",
+          "P03_Heavy1",
+          "P03_Heavy1",
+          null,
+          null
+        ],
+        [
+          "P03_Heavy1",
+          "P03_Heavy1",
+          "P03_Heavy1",
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          "P13_Fragile4",
+          "P13_Fragile4",
+          null,
+          null
+        ],
+        [
+          null,
+          "P13_Fragile4",
+          "P13_Fragile4",
+          null,
+          null
+        ],
+        [
+          null,
+          "P13_Fragile4",
+          "P13_Fragile4",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "P03_Heavy1",
+          "P03_Heavy1",
+          "P03_Heavy1",
+          null,
+          null
+        ],
+        [
+          "P03_Heavy1",
+          "P03_Heavy1",
+          "P03_Heavy1",
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ]
+    ],
+    [
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "P08_Heavy2",
+          "P08_Heavy2",
+          "P08_Heavy2",
+          null,
+          null,
+          null
+        ],
+        [
+          "P08_Heavy2",
+          "P08_Heavy2",
+          "P08_Heavy2",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium"
+        ],
+        [
+          "P05_Fragile2",
+          "P05_Fragile2",
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium"
+        ],
+        [
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          "P10_Medium2",
+          "P10_Medium2",
+          null
+        ],
+        [
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          "P10_Medium2",
+          "P10_Medium2",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "P10_Medium2",
+          "P10_Medium2",
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "P08_Heavy2",
+          "P08_Heavy2",
+          "P08_Heavy2",
+          null,
+          null,
+          null
+        ],
+        [
+          "P08_Heavy2",
+          "P08_Heavy2",
+          "P08_Heavy2",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium"
+        ],
+        [
+          "P05_Fragile2",
+          "P05_Fragile2",
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium"
+        ],
+        [
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          "P10_Medium2",
+          "P10_Medium2",
+          null
+        ],
+        [
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          "P10_Medium2",
+          "P10_Medium2",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "P10_Medium2",
+          "P10_Medium2",
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "P08_Heavy2",
+          "P08_Heavy2",
+          "P08_Heavy2",
+          null,
+          null,
+          null
+        ],
+        [
+          "P08_Heavy2",
+          "P08_Heavy2",
+          "P08_Heavy2",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium"
+        ],
+        [
+          null,
+          null,
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium",
+          "P04_Medium"
+        ],
+        [
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          "P10_Medium2",
+          "P10_Medium2",
+          null
+        ],
+        [
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          "P15_ValueHigh",
+          "P10_Medium2",
+          "P10_Medium2",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "P10_Medium2",
+          "P10_Medium2",
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "P07_Long",
+          "P07_Long",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "P07_Long",
+          "P07_Long",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "P07_Long",
+          "P07_Long",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "P07_Long",
+          "P07_Long",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "P07_Long",
+          "P07_Long",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ]
+    ],
+    [
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          "P09_Fragile3",
+          "P09_Fragile3",
+          "P09_Fragile3",
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          "P09_Fragile3",
+          "P09_Fragile3",
+          "P09_Fragile3",
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          "P09_Fragile3",
+          "P09_Fragile3",
+          "P09_Fragile3",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3"
+        ],
+        [
+          "P01_Small",
+          "P01_Small",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "P01_Small",
+          "P01_Small",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3"
+        ],
+        [
+          "P01_Small",
+          "P01_Small",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "P01_Small",
+          "P01_Small",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P14_Heavy3",
+          "P14_Heavy3",
+          "P14_Heavy3"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "P11_Big2",
+          "P11_Big2"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ]
+    ]
+  ]
+}

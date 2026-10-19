@@ -6,11 +6,11 @@ from typing import Iterator
 from .geometry import is_valid, oriented_dimensions
 from .models import ORIENTATIONS, Placement, Problem, State
 
-# dana, posisi parkir tidak bergantung ke lebar truk
 def outside_position(problem: Problem, index: int) -> tuple[int, int, int]:
+    """Keep parking boxes beyond every truck, separated under any orientation."""
     stride = max((max(p.dimensions.w, p.dimensions.l, p.dimensions.h)
                   for p in problem.packages), default=1) + 1
-    return index * stride, 0, 0
+    return max(truck.dimensions.w for truck in problem.trucks) + 1 + index * stride, 0, 0
 
 
 def empty_state(problem: Problem) -> State:
@@ -123,6 +123,8 @@ def sample_neighbor(problem: Problem, state: State, rng: Random) -> State | None
 
 # dana, truk tujuan acak, koordinat ngikut dimensi truknya
 def random_neighbor(problem: Problem, state: State, rng: Random, tries: int = 100) -> State | None:
+    if not is_valid(problem, state):
+        raise ValueError("Neighborhood requires a valid source state")
     if not problem.packages:
         return None
     ids = [p.id for p in problem.packages]

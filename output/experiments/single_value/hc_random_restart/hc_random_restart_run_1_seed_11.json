@@ -1,0 +1,4540 @@
+{
+  "schema_version": 2,
+  "algorithm": "hc",
+  "parameters": {
+    "variant": "random_restart",
+    "max_iterations": null,
+    "max_restarts": 3,
+    "objective": "value"
+  },
+  "seed": 11,
+  "initial_state": {
+    "placements": {
+      "AIAlaWND_P01": {
+        "position": [
+          1,
+          10,
+          0
+        ],
+        "orientation": [
+          "x",
+          "y",
+          "z"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P02": {
+        "position": [
+          7,
+          3,
+          0
+        ],
+        "orientation": [
+          "y",
+          "z",
+          "x"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P03_Fragile": {
+        "position": [
+          29,
+          0,
+          0
+        ],
+        "orientation": [
+          "y",
+          "x",
+          "z"
+        ],
+        "truck_index": null,
+        "inside": false
+      },
+      "AIAlaWND_P04": {
+        "position": [
+          38,
+          0,
+          0
+        ],
+        "orientation": [
+          "x",
+          "z",
+          "y"
+        ],
+        "truck_index": null,
+        "inside": false
+      },
+      "AIAlaWND_P05": {
+        "position": [
+          47,
+          0,
+          0
+        ],
+        "orientation": [
+          "x",
+          "z",
+          "y"
+        ],
+        "truck_index": null,
+        "inside": false
+      },
+      "AIAlaWND_P06_Fragile": {
+        "position": [
+          8,
+          0,
+          0
+        ],
+        "orientation": [
+          "y",
+          "x",
+          "z"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P07": {
+        "position": [
+          3,
+          0,
+          0
+        ],
+        "orientation": [
+          "z",
+          "y",
+          "x"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P08": {
+        "position": [
+          1,
+          7,
+          0
+        ],
+        "orientation": [
+          "y",
+          "z",
+          "x"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P09_Fragile": {
+        "position": [
+          2,
+          10,
+          2
+        ],
+        "orientation": [
+          "z",
+          "x",
+          "y"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P10": {
+        "position": [
+          5,
+          1,
+          0
+        ],
+        "orientation": [
+          "z",
+          "y",
+          "x"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P11": {
+        "position": [
+          5,
+          10,
+          0
+        ],
+        "orientation": [
+          "x",
+          "y",
+          "z"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P12": {
+        "position": [
+          2,
+          11,
+          1
+        ],
+        "orientation": [
+          "x",
+          "y",
+          "z"
+        ],
+        "truck_index": 0,
+        "inside": true
+      }
+    }
+  },
+  "final_state": {
+    "placements": {
+      "AIAlaWND_P01": {
+        "position": [
+          3,
+          6,
+          0
+        ],
+        "orientation": [
+          "z",
+          "y",
+          "x"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P02": {
+        "position": [
+          4,
+          0,
+          0
+        ],
+        "orientation": [
+          "z",
+          "x",
+          "y"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P03_Fragile": {
+        "position": [
+          5,
+          10,
+          0
+        ],
+        "orientation": [
+          "y",
+          "x",
+          "z"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P04": {
+        "position": [
+          0,
+          4,
+          0
+        ],
+        "orientation": [
+          "z",
+          "x",
+          "y"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P05": {
+        "position": [
+          3,
+          12,
+          0
+        ],
+        "orientation": [
+          "x",
+          "z",
+          "y"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P06_Fragile": {
+        "position": [
+          1,
+          8,
+          0
+        ],
+        "orientation": [
+          "z",
+          "x",
+          "y"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P07": {
+        "position": [
+          4,
+          7,
+          0
+        ],
+        "orientation": [
+          "x",
+          "z",
+          "y"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P08": {
+        "position": [
+          2,
+          17,
+          0
+        ],
+        "orientation": [
+          "x",
+          "y",
+          "z"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P09_Fragile": {
+        "position": [
+          3,
+          10,
+          0
+        ],
+        "orientation": [
+          "x",
+          "z",
+          "y"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P10": {
+        "position": [
+          1,
+          13,
+          3
+        ],
+        "orientation": [
+          "y",
+          "x",
+          "z"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P11": {
+        "position": [
+          8,
+          11,
+          0
+        ],
+        "orientation": [
+          "z",
+          "y",
+          "x"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P12": {
+        "position": [
+          1,
+          18,
+          0
+        ],
+        "orientation": [
+          "y",
+          "z",
+          "x"
+        ],
+        "truck_index": 0,
+        "inside": true
+      }
+    }
+  },
+  "final_objective": 1245.0,
+  "duration_seconds": 31.840820400000666,
+  "iterations": 14,
+  "history": [
+    {
+      "iteration": 0,
+      "objective": 900.0,
+      "accepted": false,
+      "neighbors_evaluated": 0,
+      "restart": 0,
+      "run_iteration": 0,
+      "best_objective": 900.0,
+      "event": "initial"
+    },
+    {
+      "iteration": 1,
+      "objective": 1020.0,
+      "accepted": true,
+      "neighbors_evaluated": 830,
+      "restart": 0,
+      "run_iteration": 1,
+      "best_objective": 1020.0
+    },
+    {
+      "iteration": 2,
+      "objective": 1095.0,
+      "accepted": true,
+      "neighbors_evaluated": 730,
+      "restart": 0,
+      "run_iteration": 2,
+      "best_objective": 1095.0
+    },
+    {
+      "iteration": 3,
+      "objective": 1095.0,
+      "accepted": false,
+      "neighbors_evaluated": 684,
+      "restart": 0,
+      "run_iteration": 3,
+      "best_objective": 1095.0
+    },
+    {
+      "iteration": 3,
+      "objective": 790.0,
+      "accepted": false,
+      "neighbors_evaluated": 0,
+      "restart": 1,
+      "run_iteration": 0,
+      "best_objective": 1095.0,
+      "event": "restart"
+    },
+    {
+      "iteration": 4,
+      "objective": 990.0,
+      "accepted": true,
+      "neighbors_evaluated": 871,
+      "restart": 1,
+      "run_iteration": 1,
+      "best_objective": 1095.0
+    },
+    {
+      "iteration": 5,
+      "objective": 990.0,
+      "accepted": false,
+      "neighbors_evaluated": 671,
+      "restart": 1,
+      "run_iteration": 2,
+      "best_objective": 1095.0
+    },
+    {
+      "iteration": 5,
+      "objective": 775.0,
+      "accepted": false,
+      "neighbors_evaluated": 0,
+      "restart": 2,
+      "run_iteration": 0,
+      "best_objective": 1095.0,
+      "event": "restart"
+    },
+    {
+      "iteration": 6,
+      "objective": 925.0,
+      "accepted": true,
+      "neighbors_evaluated": 1003,
+      "restart": 2,
+      "run_iteration": 1,
+      "best_objective": 1095.0
+    },
+    {
+      "iteration": 7,
+      "objective": 995.0,
+      "accepted": true,
+      "neighbors_evaluated": 857,
+      "restart": 2,
+      "run_iteration": 2,
+      "best_objective": 1095.0
+    },
+    {
+      "iteration": 8,
+      "objective": 1045.0,
+      "accepted": true,
+      "neighbors_evaluated": 842,
+      "restart": 2,
+      "run_iteration": 3,
+      "best_objective": 1095.0
+    },
+    {
+      "iteration": 9,
+      "objective": 1045.0,
+      "accepted": false,
+      "neighbors_evaluated": 800,
+      "restart": 2,
+      "run_iteration": 4,
+      "best_objective": 1095.0
+    },
+    {
+      "iteration": 9,
+      "objective": 910.0,
+      "accepted": false,
+      "neighbors_evaluated": 0,
+      "restart": 3,
+      "run_iteration": 0,
+      "best_objective": 1095.0,
+      "event": "restart"
+    },
+    {
+      "iteration": 10,
+      "objective": 1020.0,
+      "accepted": true,
+      "neighbors_evaluated": 809,
+      "restart": 3,
+      "run_iteration": 1,
+      "best_objective": 1095.0
+    },
+    {
+      "iteration": 11,
+      "objective": 1100.0,
+      "accepted": true,
+      "neighbors_evaluated": 780,
+      "restart": 3,
+      "run_iteration": 2,
+      "best_objective": 1100.0
+    },
+    {
+      "iteration": 12,
+      "objective": 1175.0,
+      "accepted": true,
+      "neighbors_evaluated": 710,
+      "restart": 3,
+      "run_iteration": 3,
+      "best_objective": 1175.0
+    },
+    {
+      "iteration": 13,
+      "objective": 1245.0,
+      "accepted": true,
+      "neighbors_evaluated": 687,
+      "restart": 3,
+      "run_iteration": 4,
+      "best_objective": 1245.0
+    },
+    {
+      "iteration": 14,
+      "objective": 1245.0,
+      "accepted": false,
+      "neighbors_evaluated": 666,
+      "restart": 3,
+      "run_iteration": 5,
+      "best_objective": 1245.0
+    }
+  ],
+  "initial_population": [],
+  "stop_reason": "max_restarts",
+  "is_stub": false,
+  "metadata": {
+    "accepted_moves": 10,
+    "restart_count": 3,
+    "iterations_per_restart": [
+      3,
+      2,
+      4,
+      5
+    ],
+    "best_restart": 3,
+    "runs": [
+      {
+        "restart": 0,
+        "seed": 11,
+        "iterations": 3,
+        "initial_objective": 900.0,
+        "final_objective": 1095.0,
+        "initial_state": {
+          "placements": {
+            "AIAlaWND_P01": {
+              "position": [
+                1,
+                10,
+                0
+              ],
+              "orientation": [
+                "x",
+                "y",
+                "z"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P02": {
+              "position": [
+                7,
+                3,
+                0
+              ],
+              "orientation": [
+                "y",
+                "z",
+                "x"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P03_Fragile": {
+              "position": [
+                29,
+                0,
+                0
+              ],
+              "orientation": [
+                "y",
+                "x",
+                "z"
+              ],
+              "truck_index": null,
+              "inside": false
+            },
+            "AIAlaWND_P04": {
+              "position": [
+                38,
+                0,
+                0
+              ],
+              "orientation": [
+                "x",
+                "z",
+                "y"
+              ],
+              "truck_index": null,
+              "inside": false
+            },
+            "AIAlaWND_P05": {
+              "position": [
+                47,
+                0,
+                0
+              ],
+              "orientation": [
+                "x",
+                "z",
+                "y"
+              ],
+              "truck_index": null,
+              "inside": false
+            },
+            "AIAlaWND_P06_Fragile": {
+              "position": [
+                8,
+                0,
+                0
+              ],
+              "orientation": [
+                "y",
+                "x",
+                "z"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P07": {
+              "position": [
+                3,
+                0,
+                0
+              ],
+              "orientation": [
+                "z",
+                "y",
+                "x"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P08": {
+              "position": [
+                1,
+                7,
+                0
+              ],
+              "orientation": [
+                "y",
+                "z",
+                "x"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P09_Fragile": {
+              "position": [
+                2,
+                10,
+                2
+              ],
+              "orientation": [
+                "z",
+                "x",
+                "y"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P10": {
+              "position": [
+                5,
+                1,
+                0
+              ],
+              "orientation": [
+                "z",
+                "y",
+                "x"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P11": {
+              "position": [
+                5,
+                10,
+                0
+              ],
+              "orientation": [
+                "x",
+                "y",
+                "z"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P12": {
+              "position": [
+                2,
+                11,
+                1
+              ],
+              "orientation": [
+                "x",
+                "y",
+                "z"
+              ],
+              "truck_index": 0,
+              "inside": true
+            }
+          }
+        },
+        "final_state": {
+          "placements": {
+            "AIAlaWND_P01": {
+              "position": [
+                1,
+                10,
+                0
+              ],
+              "orientation": [
+                "x",
+                "y",
+                "z"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P02": {
+              "position": [
+                7,
+                3,
+                0
+              ],
+              "orientation": [
+                "y",
+                "z",
+                "x"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P03_Fragile": {
+              "position": [
+                6,
+                15,
+                2
+              ],
+              "orientation": [
+                "y",
+                "x",
+                "z"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P04": {
+              "position": [
+                38,
+                0,
+                0
+              ],
+              "orientation": [
+                "x",
+                "z",
+                "y"
+              ],
+              "truck_index": null,
+              "inside": false
+            },
+            "AIAlaWND_P05": {
+              "position": [
+                1,
+                18,
+                0
+              ],
+              "orientation": [
+                "x",
+                "z",
+                "y"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P06_Fragile": {
+              "position": [
+                8,
+                0,
+                0
+              ],
+              "orientation": [
+                "y",
+                "x",
+                "z"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P07": {
+              "position": [
+                3,
+                0,
+                0
+              ],
+              "orientation": [
+                "z",
+                "y",
+                "x"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P08": {
+              "position": [
+                1,
+                7,
+                0
+              ],
+              "orientation": [
+                "y",
+                "z",
+                "x"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P09_Fragile": {
+              "position": [
+                2,
+                10,
+                2
+              ],
+              "orientation": [
+                "z",
+                "x",
+                "y"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P10": {
+              "position": [
+                5,
+                1,
+                0
+              ],
+              "orientation": [
+                "z",
+                "y",
+                "x"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P11": {
+              "position": [
+                5,
+                10,
+                0
+              ],
+              "orientation": [
+                "x",
+                "y",
+                "z"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P12": {
+              "position": [
+                2,
+                11,
+                1
+              ],
+              "orientation": [
+                "x",
+                "y",
+                "z"
+              ],
+              "truck_index": 0,
+              "inside": true
+            }
+          }
+        },
+        "duration_seconds": 8.141986000002362,
+        "stop_reason": "no_improving_neighbor"
+      },
+      {
+        "restart": 1,
+        "seed": 15970126346341786989,
+        "iterations": 2,
+        "initial_objective": 790.0,
+        "final_objective": 990.0,
+        "initial_state": {
+          "placements": {
+            "AIAlaWND_P01": {
+              "position": [
+                0,
+                15,
+                0
+              ],
+              "orientation": [
+                "x",
+                "y",
+                "z"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P02": {
+              "position": [
+                6,
+                11,
+                0
+              ],
+              "orientation": [
+                "z",
+                "x",
+                "y"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P03_Fragile": {
+              "position": [
+                4,
+                16,
+                0
+              ],
+              "orientation": [
+                "y",
+                "z",
+                "x"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P04": {
+              "position": [
+                38,
+                0,
+                0
+              ],
+              "orientation": [
+                "y",
+                "z",
+                "x"
+              ],
+              "truck_index": null,
+              "inside": false
+            },
+            "AIAlaWND_P05": {
+              "position": [
+                8,
+                8,
+                0
+              ],
+              "orientation": [
+                "y",
+                "z",
+                "x"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P06_Fragile": {
+              "position": [
+                2,
+                8,
+                0
+              ],
+              "orientation": [
+                "x",
+                "z",
+                "y"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P07": {
+              "position": [
+                4,
+                4,
+                0
+              ],
+              "orientation": [
+                "z",
+                "x",
+                "y"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P08": {
+              "position": [
+                7,
+                7,
+                0
+              ],
+              "orientation": [
+                "x",
+                "z",
+                "y"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P09_Fragile": {
+              "position": [
+                2,
+                0,
+                0
+              ],
+              "orientation": [
+                "x",
+                "y",
+                "z"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P10": {
+              "position": [
+                92,
+                0,
+                0
+              ],
+              "orientation": [
+                "y",
+                "x",
+                "z"
+              ],
+              "truck_index": null,
+              "inside": false
+            },
+            "AIAlaWND_P11": {
+              "position": [
+                101,
+                0,
+                0
+              ],
+              "orientation": [
+                "x",
+                "z",
+                "y"
+              ],
+              "truck_index": null,
+              "inside": false
+            },
+            "AIAlaWND_P12": {
+              "position": [
+                5,
+                13,
+                0
+              ],
+              "orientation": [
+                "z",
+                "x",
+                "y"
+              ],
+              "truck_index": 0,
+              "inside": true
+            }
+          }
+        },
+        "final_state": {
+          "placements": {
+            "AIAlaWND_P01": {
+              "position": [
+                0,
+                15,
+                0
+              ],
+              "orientation": [
+                "x",
+                "y",
+                "z"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P02": {
+              "position": [
+                6,
+                11,
+                0
+              ],
+              "orientation": [
+                "z",
+                "x",
+                "y"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P03_Fragile": {
+              "position": [
+                4,
+                16,
+                0
+              ],
+              "orientation": [
+                "y",
+                "z",
+                "x"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P04": {
+              "position": [
+                38,
+                0,
+                0
+              ],
+              "orientation": [
+                "y",
+                "z",
+                "x"
+              ],
+              "truck_index": null,
+              "inside": false
+            },
+            "AIAlaWND_P05": {
+              "position": [
+                8,
+                8,
+                0
+              ],
+              "orientation": [
+                "y",
+                "z",
+                "x"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P06_Fragile": {
+              "position": [
+                2,
+                8,
+                0
+              ],
+              "orientation": [
+                "x",
+                "z",
+                "y"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P07": {
+              "position": [
+                4,
+                4,
+                0
+              ],
+              "orientation": [
+                "z",
+                "x",
+                "y"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P08": {
+              "position": [
+                7,
+                7,
+                0
+              ],
+              "orientation": [
+                "x",
+                "z",
+                "y"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P09_Fragile": {
+              "position": [
+                2,
+                0,
+                0
+              ],
+              "orientation": [
+                "x",
+                "y",
+                "z"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P10": {
+              "position": [
+                0,
+                6,
+                3
+              ],
+              "orientation": [
+                "y",
+                "x",
+                "z"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P11": {
+              "position": [
+                101,
+                0,
+                0
+              ],
+              "orientation": [
+                "x",
+                "z",
+                "y"
+              ],
+              "truck_index": null,
+              "inside": false
+            },
+            "AIAlaWND_P12": {
+              "position": [
+                5,
+                13,
+                0
+              ],
+              "orientation": [
+                "z",
+                "x",
+                "y"
+              ],
+              "truck_index": 0,
+              "inside": true
+            }
+          }
+        },
+        "duration_seconds": 4.45309830000042,
+        "stop_reason": "no_improving_neighbor"
+      },
+      {
+        "restart": 2,
+        "seed": 15806332507635138087,
+        "iterations": 4,
+        "initial_objective": 775.0,
+        "final_objective": 1045.0,
+        "initial_state": {
+          "placements": {
+            "AIAlaWND_P01": {
+              "position": [
+                1,
+                10,
+                0
+              ],
+              "orientation": [
+                "y",
+                "z",
+                "x"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P02": {
+              "position": [
+                4,
+                5,
+                0
+              ],
+              "orientation": [
+                "z",
+                "x",
+                "y"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P03_Fragile": {
+              "position": [
+                3,
+                15,
+                2
+              ],
+              "orientation": [
+                "y",
+                "z",
+                "x"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P04": {
+              "position": [
+                38,
+                0,
+                0
+              ],
+              "orientation": [
+                "z",
+                "y",
+                "x"
+              ],
+              "truck_index": null,
+              "inside": false
+            },
+            "AIAlaWND_P05": {
+              "position": [
+                5,
+                17,
+                0
+              ],
+              "orientation": [
+                "z",
+                "x",
+                "y"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P06_Fragile": {
+              "position": [
+                5,
+                7,
+                0
+              ],
+              "orientation": [
+                "x",
+                "y",
+                "z"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P07": {
+              "position": [
+                0,
+                13,
+                0
+              ],
+              "orientation": [
+                "y",
+                "x",
+                "z"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P08": {
+              "position": [
+                74,
+                0,
+                0
+              ],
+              "orientation": [
+                "z",
+                "y",
+                "x"
+              ],
+              "truck_index": null,
+              "inside": false
+            },
+            "AIAlaWND_P09_Fragile": {
+              "position": [
+                1,
+                16,
+                2
+              ],
+              "orientation": [
+                "z",
+                "y",
+                "x"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P10": {
+              "position": [
+                92,
+                0,
+                0
+              ],
+              "orientation": [
+                "y",
+                "z",
+                "x"
+              ],
+              "truck_index": null,
+              "inside": false
+            },
+            "AIAlaWND_P11": {
+              "position": [
+                8,
+                4,
+                0
+              ],
+              "orientation": [
+                "z",
+                "y",
+                "x"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P12": {
+              "position": [
+                110,
+                0,
+                0
+              ],
+              "orientation": [
+                "x",
+                "z",
+                "y"
+              ],
+              "truck_index": null,
+              "inside": false
+            }
+          }
+        },
+        "final_state": {
+          "placements": {
+            "AIAlaWND_P01": {
+              "position": [
+                1,
+                10,
+                0
+              ],
+              "orientation": [
+                "y",
+                "z",
+                "x"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P02": {
+              "position": [
+                4,
+                5,
+                0
+              ],
+              "orientation": [
+                "z",
+                "x",
+                "y"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P03_Fragile": {
+              "position": [
+                3,
+                15,
+                2
+              ],
+              "orientation": [
+                "y",
+                "z",
+                "x"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P04": {
+              "position": [
+                2,
+                2,
+                0
+              ],
+              "orientation": [
+                "z",
+                "y",
+                "x"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P05": {
+              "position": [
+                5,
+                17,
+                0
+              ],
+              "orientation": [
+                "z",
+                "x",
+                "y"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P06_Fragile": {
+              "position": [
+                5,
+                7,
+                0
+              ],
+              "orientation": [
+                "x",
+                "y",
+                "z"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P07": {
+              "position": [
+                0,
+                13,
+                0
+              ],
+              "orientation": [
+                "y",
+                "x",
+                "z"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P08": {
+              "position": [
+                8,
+                11,
+                0
+              ],
+              "orientation": [
+                "z",
+                "y",
+                "x"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P09_Fragile": {
+              "position": [
+                1,
+                16,
+                2
+              ],
+              "orientation": [
+                "z",
+                "y",
+                "x"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P10": {
+              "position": [
+                92,
+                0,
+                0
+              ],
+              "orientation": [
+                "y",
+                "z",
+                "x"
+              ],
+              "truck_index": null,
+              "inside": false
+            },
+            "AIAlaWND_P11": {
+              "position": [
+                8,
+                4,
+                0
+              ],
+              "orientation": [
+                "z",
+                "y",
+                "x"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P12": {
+              "position": [
+                6,
+                4,
+                0
+              ],
+              "orientation": [
+                "x",
+                "z",
+                "y"
+              ],
+              "truck_index": 0,
+              "inside": true
+            }
+          }
+        },
+        "duration_seconds": 8.6393878999952,
+        "stop_reason": "no_improving_neighbor"
+      },
+      {
+        "restart": 3,
+        "seed": 14410929494797389965,
+        "iterations": 5,
+        "initial_objective": 910.0,
+        "final_objective": 1245.0,
+        "initial_state": {
+          "placements": {
+            "AIAlaWND_P01": {
+              "position": [
+                3,
+                6,
+                0
+              ],
+              "orientation": [
+                "z",
+                "y",
+                "x"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P02": {
+              "position": [
+                20,
+                0,
+                0
+              ],
+              "orientation": [
+                "z",
+                "x",
+                "y"
+              ],
+              "truck_index": null,
+              "inside": false
+            },
+            "AIAlaWND_P03_Fragile": {
+              "position": [
+                5,
+                10,
+                0
+              ],
+              "orientation": [
+                "y",
+                "x",
+                "z"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P04": {
+              "position": [
+                0,
+                4,
+                0
+              ],
+              "orientation": [
+                "z",
+                "x",
+                "y"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P05": {
+              "position": [
+                47,
+                0,
+                0
+              ],
+              "orientation": [
+                "x",
+                "z",
+                "y"
+              ],
+              "truck_index": null,
+              "inside": false
+            },
+            "AIAlaWND_P06_Fragile": {
+              "position": [
+                56,
+                0,
+                0
+              ],
+              "orientation": [
+                "z",
+                "x",
+                "y"
+              ],
+              "truck_index": null,
+              "inside": false
+            },
+            "AIAlaWND_P07": {
+              "position": [
+                4,
+                7,
+                0
+              ],
+              "orientation": [
+                "x",
+                "z",
+                "y"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P08": {
+              "position": [
+                2,
+                17,
+                0
+              ],
+              "orientation": [
+                "x",
+                "y",
+                "z"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P09_Fragile": {
+              "position": [
+                3,
+                10,
+                0
+              ],
+              "orientation": [
+                "x",
+                "z",
+                "y"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P10": {
+              "position": [
+                1,
+                13,
+                3
+              ],
+              "orientation": [
+                "y",
+                "x",
+                "z"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P11": {
+              "position": [
+                8,
+                11,
+                0
+              ],
+              "orientation": [
+                "z",
+                "y",
+                "x"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P12": {
+              "position": [
+                110,
+                0,
+                0
+              ],
+              "orientation": [
+                "y",
+                "z",
+                "x"
+              ],
+              "truck_index": null,
+              "inside": false
+            }
+          }
+        },
+        "final_state": {
+          "placements": {
+            "AIAlaWND_P01": {
+              "position": [
+                3,
+                6,
+                0
+              ],
+              "orientation": [
+                "z",
+                "y",
+                "x"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P02": {
+              "position": [
+                4,
+                0,
+                0
+              ],
+              "orientation": [
+                "z",
+                "x",
+                "y"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P03_Fragile": {
+              "position": [
+                5,
+                10,
+                0
+              ],
+              "orientation": [
+                "y",
+                "x",
+                "z"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P04": {
+              "position": [
+                0,
+                4,
+                0
+              ],
+              "orientation": [
+                "z",
+                "x",
+                "y"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P05": {
+              "position": [
+                3,
+                12,
+                0
+              ],
+              "orientation": [
+                "x",
+                "z",
+                "y"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P06_Fragile": {
+              "position": [
+                1,
+                8,
+                0
+              ],
+              "orientation": [
+                "z",
+                "x",
+                "y"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P07": {
+              "position": [
+                4,
+                7,
+                0
+              ],
+              "orientation": [
+                "x",
+                "z",
+                "y"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P08": {
+              "position": [
+                2,
+                17,
+                0
+              ],
+              "orientation": [
+                "x",
+                "y",
+                "z"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P09_Fragile": {
+              "position": [
+                3,
+                10,
+                0
+              ],
+              "orientation": [
+                "x",
+                "z",
+                "y"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P10": {
+              "position": [
+                1,
+                13,
+                3
+              ],
+              "orientation": [
+                "y",
+                "x",
+                "z"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P11": {
+              "position": [
+                8,
+                11,
+                0
+              ],
+              "orientation": [
+                "z",
+                "y",
+                "x"
+              ],
+              "truck_index": 0,
+              "inside": true
+            },
+            "AIAlaWND_P12": {
+              "position": [
+                1,
+                18,
+                0
+              ],
+              "orientation": [
+                "y",
+                "z",
+                "x"
+              ],
+              "truck_index": 0,
+              "inside": true
+            }
+          }
+        },
+        "duration_seconds": 10.262529900006484,
+        "stop_reason": "no_improving_neighbor"
+      }
+    ]
+  },
+  "problem": {
+    "trucks": [
+      {
+        "dimensions": {
+          "w": 10,
+          "l": 20,
+          "h": 5
+        },
+        "max_capacity": 500.0
+      }
+    ],
+    "packages": [
+      {
+        "id": "AIAlaWND_P01",
+        "dimensions": {
+          "w": 3,
+          "l": 4,
+          "h": 1
+        },
+        "value": 60.0,
+        "weight": 5.0,
+        "is_fragile": false,
+        "eta": 3
+      },
+      {
+        "id": "AIAlaWND_P02",
+        "dimensions": {
+          "w": 4,
+          "l": 4,
+          "h": 2
+        },
+        "value": 80.0,
+        "weight": 25.0,
+        "is_fragile": false,
+        "eta": 2
+      },
+      {
+        "id": "AIAlaWND_P03_Fragile",
+        "dimensions": {
+          "w": 2,
+          "l": 3,
+          "h": 2
+        },
+        "value": 120.0,
+        "weight": 10.0,
+        "is_fragile": true,
+        "eta": 1
+      },
+      {
+        "id": "AIAlaWND_P04",
+        "dimensions": {
+          "w": 5,
+          "l": 6,
+          "h": 2
+        },
+        "value": 150.0,
+        "weight": 40.0,
+        "is_fragile": false,
+        "eta": 4
+      },
+      {
+        "id": "AIAlaWND_P05",
+        "dimensions": {
+          "w": 3,
+          "l": 5,
+          "h": 1
+        },
+        "value": 75.0,
+        "weight": 15.0,
+        "is_fragile": false,
+        "eta": 2
+      },
+      {
+        "id": "AIAlaWND_P06_Fragile",
+        "dimensions": {
+          "w": 2,
+          "l": 2,
+          "h": 2
+        },
+        "value": 110.0,
+        "weight": 12.0,
+        "is_fragile": true,
+        "eta": 3
+      },
+      {
+        "id": "AIAlaWND_P07",
+        "dimensions": {
+          "w": 4,
+          "l": 5,
+          "h": 2
+        },
+        "value": 95.0,
+        "weight": 30.0,
+        "is_fragile": false,
+        "eta": 5
+      },
+      {
+        "id": "AIAlaWND_P08",
+        "dimensions": {
+          "w": 3,
+          "l": 3,
+          "h": 1
+        },
+        "value": 50.0,
+        "weight": 8.0,
+        "is_fragile": false,
+        "eta": 1
+      },
+      {
+        "id": "AIAlaWND_P09_Fragile",
+        "dimensions": {
+          "w": 2,
+          "l": 4,
+          "h": 2
+        },
+        "value": 130.0,
+        "weight": 14.0,
+        "is_fragile": true,
+        "eta": 2
+      },
+      {
+        "id": "AIAlaWND_P10",
+        "dimensions": {
+          "w": 5,
+          "l": 8,
+          "h": 2
+        },
+        "value": 200.0,
+        "weight": 60.0,
+        "is_fragile": false,
+        "eta": 3
+      },
+      {
+        "id": "AIAlaWND_P11",
+        "dimensions": {
+          "w": 3,
+          "l": 6,
+          "h": 2
+        },
+        "value": 105.0,
+        "weight": 22.0,
+        "is_fragile": false,
+        "eta": 4
+      },
+      {
+        "id": "AIAlaWND_P12",
+        "dimensions": {
+          "w": 2,
+          "l": 5,
+          "h": 1
+        },
+        "value": 70.0,
+        "weight": 12.0,
+        "is_fragile": false,
+        "eta": 2
+      }
+    ]
+  },
+  "initial_coordinate_map": [
+    [
+      [
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null,
+          null,
+          null,
+          "AIAlaWND_P06_Fragile",
+          "AIAlaWND_P06_Fragile"
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          "AIAlaWND_P06_Fragile",
+          "AIAlaWND_P06_Fragile"
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P08",
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P08",
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P08",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P01",
+          "AIAlaWND_P01",
+          "AIAlaWND_P01",
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P01",
+          "AIAlaWND_P01",
+          "AIAlaWND_P01",
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P01",
+          "AIAlaWND_P01",
+          "AIAlaWND_P01",
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P01",
+          "AIAlaWND_P01",
+          "AIAlaWND_P01",
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null,
+          null,
+          null,
+          "AIAlaWND_P06_Fragile",
+          "AIAlaWND_P06_Fragile"
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          "AIAlaWND_P06_Fragile",
+          "AIAlaWND_P06_Fragile"
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P08",
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P08",
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P08",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P12",
+          "AIAlaWND_P12",
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P12",
+          "AIAlaWND_P12",
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P12",
+          "AIAlaWND_P12",
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P12",
+          "AIAlaWND_P12",
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P12",
+          "AIAlaWND_P12",
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P08",
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P08",
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P08",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ]
+    ]
+  ],
+  "final_coordinate_map": [
+    [
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P01",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P01",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P06_Fragile",
+          "AIAlaWND_P06_Fragile",
+          "AIAlaWND_P01",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P06_Fragile",
+          "AIAlaWND_P06_Fragile",
+          "AIAlaWND_P01",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P03_Fragile",
+          "AIAlaWND_P03_Fragile",
+          "AIAlaWND_P03_Fragile",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P03_Fragile",
+          "AIAlaWND_P03_Fragile",
+          "AIAlaWND_P03_Fragile",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11"
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P05",
+          "AIAlaWND_P05",
+          "AIAlaWND_P05",
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11"
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P08",
+          "AIAlaWND_P08",
+          "AIAlaWND_P08",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P12",
+          "AIAlaWND_P08",
+          "AIAlaWND_P08",
+          "AIAlaWND_P08",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P12",
+          "AIAlaWND_P08",
+          "AIAlaWND_P08",
+          "AIAlaWND_P08",
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P01",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P01",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P06_Fragile",
+          "AIAlaWND_P06_Fragile",
+          "AIAlaWND_P01",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P06_Fragile",
+          "AIAlaWND_P06_Fragile",
+          "AIAlaWND_P01",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P03_Fragile",
+          "AIAlaWND_P03_Fragile",
+          "AIAlaWND_P03_Fragile",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P03_Fragile",
+          "AIAlaWND_P03_Fragile",
+          "AIAlaWND_P03_Fragile",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11"
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P05",
+          "AIAlaWND_P05",
+          "AIAlaWND_P05",
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P12",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P12",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P01",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P01",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P01",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P01",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          null,
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11"
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P05",
+          "AIAlaWND_P05",
+          "AIAlaWND_P05",
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P12",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P12",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P05",
+          "AIAlaWND_P05",
+          "AIAlaWND_P05",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P12",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P12",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          "AIAlaWND_P04",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P05",
+          "AIAlaWND_P05",
+          "AIAlaWND_P05",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P12",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P12",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ]
+    ]
+  ]
+}

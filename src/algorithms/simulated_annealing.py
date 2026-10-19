@@ -1,11 +1,72 @@
-from math import exp
+from math import exp, isfinite
 from random import Random
 from time import perf_counter
 
-from src.core import Problem, SearchResult, State, get_objective, is_valid, random_neighbor, random_state
+from src.core import (Problem, SearchResult, State, get_objective, is_valid,
+                      move_package, random_neighbor, random_state, swap_packages)
+from src.core.geometry import oriented_dimensions
 from src.core.models import integer, number
 
-STAGNATION_K = 50
+
+def _has_improving_neighbor(problem: Problem, state: State, objective_name: str) -> bool:
+    """Check the exact improving neighborhood for the two additive objectives.
+
+    Rotation and moving already loaded packages preserve the loaded package set.
+    Only insertion or an outside/inside swap can increase its score. Insertion
+    keeps the current orientation and needs either the floor or a package top.
+    """
+    score = get_objective(objective_name)
+    value = score(problem, state)
+    inside = [p for p in problem.packages if state.placements[p.id].inside]
+    outside = [p for p in problem.packages if not state.placements[p.id].inside]
+    contributions = {p.id: p.value if objective_name == "value" else p.value / (1 + p.eta)
+                     for p in problem.packages}
+    weights = [sum(p.weight for p in inside if state.placements[p.id].truck_index == index)
+               for index in range(len(problem.trucks))]
+    for package in outside:
+        if contributions[package.id] <= 0:
+            continue
+        w, l, h = oriented_dimensions(package, state.placements[package.id])
+        for index, truck in enumerate(problem.trucks):
+            if weights[index] + package.weight > truck.max_capacity:
+                continue
+            d = truck.dimensions
+            support_heights = {0}
+            support_heights.update(
+                state.placements[p.id].position[2] + oriented_dimensions(p, state.placements[p.id])[2]
+                for p in inside if not p.is_fragile and state.placements[p.id].truck_index == index)
+            for z in sorted(support_heights):
+                if z + h > d.h:
+                    continue
+                for y in range(d.l - l + 1):
+                    for x in range(d.w - w + 1):
+                        candidate = move_package(state, package.id, (x, y, z), index)
+                        if is_valid(problem, candidate) and score(problem, candidate) > value:
+                            return True
+        for loaded in inside:
+            if contributions[package.id] <= contributions[loaded.id]:
+                continue
+            candidate = swap_packages(state, package.id, loaded.id)
+            if is_valid(problem, candidate) and score(problem, candidate) > value:
+                return True
+    return False
+
+
+def _exponential_metrics(delta_e: float, temperature: float) -> tuple[float | None, float | str, bool]:
+    """Keep the unclipped exponential and its logarithm JSON serializable."""
+    exponent = delta_e / temperature
+    try:
+        raw = exp(exponent)
+    except OverflowError:
+        raw = None
+    overflow = raw is None or not isfinite(raw)
+    if overflow:
+        raw = None
+    if not isfinite(exponent):
+        # Preserve extreme ratios without putting Infinity in saved JSON.
+        from decimal import Decimal
+        exponent = str(Decimal(str(delta_e)) / Decimal(str(temperature)))
+    return raw, exponent, overflow
 
 
 def solve(problem: Problem, config: dict | None = None, seed: int | None = None) -> SearchResult:
@@ -40,9 +101,16 @@ def solve(problem: Problem, config: dict | None = None, seed: int | None = None)
     current = initial.copy()
     value = score(problem, current)
 
-    best_value = value
-    no_improve = 0
-    stuck_count = 0
+    local_optima = {}
+
+    def is_local_optimum(state: State) -> bool:
+        key = tuple(state.placements[p.id] for p in problem.packages)
+        if key not in local_optima:
+            local_optima[key] = not _has_improving_neighbor(problem, state, objective_name)
+        return local_optima[key]
+
+    is_stuck = is_local_optimum(current)
+    stuck_count = int(is_stuck)
 
     history = [{
         "iteration": 0,
@@ -50,10 +118,12 @@ def solve(problem: Problem, config: dict | None = None, seed: int | None = None)
         "temperature": None,
         "delta_e": None,
         "exp_delta_over_temperature": None,
+        "log_exp_delta_over_temperature": None,
+        "exp_overflow": False,
         "acceptance_probability": None,
         "accepted": None,
         "candidate_found": True,
-        "stuck": False,
+        "stuck": is_stuck,
     }]
 
     iterations = 0
@@ -70,16 +140,14 @@ def solve(problem: Problem, config: dict | None = None, seed: int | None = None)
         candidate = random_neighbor(problem, current, rng)
         if candidate is None:
             iterations += 1
-            no_improve += 1
-            is_stuck = no_improve >= STAGNATION_K
-            if no_improve == STAGNATION_K:
-                stuck_count += 1
             history.append({
                 "iteration": iterations,
                 "objective": value,
                 "temperature": temperature,
                 "delta_e": None,
                 "exp_delta_over_temperature": None,
+                "log_exp_delta_over_temperature": None,
+                "exp_overflow": False,
                 "acceptance_probability": None,
                 "accepted": False,
                 "candidate_found": False,
@@ -91,31 +159,18 @@ def solve(problem: Problem, config: dict | None = None, seed: int | None = None)
         delta_e = candidate_value - value
         iterations += 1
 
-        if delta_e >= 0:
-            exp_delta_over_temperature = 1.0
-            acceptance_probability = 1.0
-            accepted = True
-        else:
-            try:
-                exp_delta_over_temperature = exp(delta_e / temperature)
-            except OverflowError:
-                exp_delta_over_temperature = 0.0
-            acceptance_probability = exp_delta_over_temperature
-            accepted = rng.random() < acceptance_probability
+        exp_delta_over_temperature, log_exp, exp_overflow = _exponential_metrics(delta_e, temperature)
+        acceptance_probability = 1.0 if delta_e >= 0 else exp_delta_over_temperature
+        accepted = delta_e >= 0 or rng.random() < acceptance_probability
 
         if accepted:
             current = candidate
             value = candidate_value
 
-        if value > best_value:
-            best_value = value
-            no_improve = 0
-            is_stuck = False
-        else:
-            no_improve += 1
-            is_stuck = no_improve >= STAGNATION_K
-            if no_improve == STAGNATION_K:
-                stuck_count += 1
+        was_stuck = is_stuck
+        is_stuck = is_local_optimum(current)
+        if is_stuck and not was_stuck:
+            stuck_count += 1
 
         history.append({
             "iteration": iterations,
@@ -123,6 +178,8 @@ def solve(problem: Problem, config: dict | None = None, seed: int | None = None)
             "temperature": temperature,
             "delta_e": delta_e,
             "exp_delta_over_temperature": exp_delta_over_temperature,
+            "log_exp_delta_over_temperature": log_exp,
+            "exp_overflow": exp_overflow,
             "acceptance_probability": acceptance_probability,
             "accepted": accepted,
             "candidate_found": True,
@@ -149,6 +206,6 @@ def solve(problem: Problem, config: dict | None = None, seed: int | None = None)
         stop_reason=stop_reason,
         metadata={
             "stuck_count": stuck_count,
-            "stagnation_k": STAGNATION_K,
+            "stuck_definition": "Entry episodes into states with no strictly improving legal neighbor, including the initial state",
         },
     )

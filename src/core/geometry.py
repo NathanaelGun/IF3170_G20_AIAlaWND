@@ -39,9 +39,12 @@ def validation_errors(problem: Problem, state: State) -> list[str]:
             truck_bounds = ((0, 0, 0), (truck.w, truck.l, truck.h))
             if not all(0 <= low[i] and high[i] <= truck_bounds[1][i] for i in range(3)):
                 errors.append(f"{key}: inside package crosses truck boundary")
+        elif any(overlap(boxes[key], ((0, 0, 0), (truck.dimensions.w, truck.dimensions.l, truck.dimensions.h)))
+                 for truck in problem.trucks):
+            errors.append(f"{key}: outside package must be completely outside every truck")
     for key, other in combinations(packages, 2):
         idx_a, idx_b = state.placements[key].truck_index, state.placements[other].truck_index
-        if idx_a is not None and idx_a == idx_b and overlap(boxes[key], boxes[other]):
+        if idx_a == idx_b and overlap(boxes[key], boxes[other]):
             errors.append(f"{key}/{other}: packages overlap")
     for index, truck in enumerate(problem.trucks):
         inside = [key for key, p in state.placements.items() if p.truck_index == index]
