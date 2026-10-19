@@ -1,0 +1,15 @@
+{
+  "num_trucks": 2,
+  "truck": {
+    "dimensions": { "w": 6, "l": 6, "h": 3 },
+    "max_capacity": 100.0
+  },
+  "packages": [
+    { "id": "PKG_H1", "dimensions": { "w": 3, "l": 3, "h": 2 }, "value": 100.0, "weight": 70.0, "is_fragile": false, "eta": 1 },
+    { "id": "PKG_H2", "dimensions": { "w": 3, "l": 3, "h": 2 }, "value": 100.0, "weight": 70.0, "is_fragile": false, "eta": 1 },
+    { "id": "PKG_L1", "dimensions": { "w": 2, "l": 2, "h": 1 }, "value": 40.0, "weight": 25.0, "is_fragile": false, "eta": 2 },
+    { "id": "PKG_L2", "dimensions": { "w": 2, "l": 2, "h": 1 }, "value": 40.0, "weight": 25.0, "is_fragile": false, "eta": 2 },
+    { "id": "PKG_F1", "dimensions": { "w": 2, "l": 2, "h": 1 }, "value": 60.0, "weight": 10.0, "is_fragile": true, "eta": 3 },
+    { "id": "PKG_F2", "dimensions": { "w": 2, "l": 2, "h": 1 }, "value": 60.0, "weight": 10.0, "is_fragile": true, "eta": 3 }
+  ]
+}

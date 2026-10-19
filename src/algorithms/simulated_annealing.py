@@ -2,7 +2,7 @@ from math import exp
 from random import Random
 from time import perf_counter
 
-from src.core import Problem, SearchResult, State, is_valid, objective, random_neighbor, random_state
+from src.core import Problem, SearchResult, State, get_objective, is_valid, random_neighbor, random_state
 from src.core.models import integer, number
 
 STAGNATION_K = 50
@@ -11,10 +11,12 @@ STAGNATION_K = 50
 def solve(problem: Problem, config: dict | None = None, seed: int | None = None) -> SearchResult:
     config = dict(config or {})
 
-    unknown = set(config) - {"initial_state", "initial_temperature", "max_iterations"}
+    unknown = set(config) - {"initial_state", "initial_temperature", "max_iterations", "objective"}
     if unknown:
         raise ValueError(f"Unknown SA parameters: {sorted(unknown)}")
 
+    objective_name = config.get("objective", "value")
+    score = get_objective(objective_name)
     initial_temperature = config.get("initial_temperature", 100.0)
     max_iterations = config.get("max_iterations", 1000)
 
@@ -36,7 +38,7 @@ def solve(problem: Problem, config: dict | None = None, seed: int | None = None)
 
     initial = initial.copy()
     current = initial.copy()
-    value = objective(problem, current)
+    value = score(problem, current)
 
     best_value = value
     no_improve = 0
@@ -85,7 +87,7 @@ def solve(problem: Problem, config: dict | None = None, seed: int | None = None)
             })
             continue
 
-        candidate_value = objective(problem, candidate)
+        candidate_value = score(problem, candidate)
         delta_e = candidate_value - value
         iterations += 1
 
@@ -135,6 +137,7 @@ def solve(problem: Problem, config: dict | None = None, seed: int | None = None)
             "initial_temperature": initial_temperature,
             "max_iterations": max_iterations,
             "schedule": "linear",
+            "objective": objective_name,
         },
         seed=seed,
         initial_state=initial,

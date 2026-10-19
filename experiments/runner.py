@@ -7,7 +7,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 from src.algorithms import genetic_algorithm, hill_climbing, simulated_annealing
-from src.core import Problem, SearchResult, objective
+from src.core import Problem, SearchResult, get_objective
 from src.core.io import save_result
 
 
@@ -85,6 +85,7 @@ def _write_summary_csv(output_dir: Path, records: list[dict]) -> None:
     csv_path = output_dir / "summary.csv"
     fieldnames = [
         "algorithm",
+        "objective",
         "experiment",
         "population",
         "iterations",
@@ -108,11 +109,13 @@ def run_hc_experiments(
     output_dir: Path | str,
     seeds: Sequence[int] = (42, 100, 2026),
     max_iterations: int | None = None,
+    objective_name: str = "value",
 ) -> int:
     target_dir = Path(output_dir)
     target_dir.mkdir(parents=True, exist_ok=True)
     records = []
-    config = {}
+    objective = get_objective(objective_name)
+    config = {"objective": objective_name}
     if max_iterations is not None:
         config["max_iterations"] = max_iterations
 
@@ -130,6 +133,7 @@ def run_hc_experiments(
         initial_obj = objective(problem, result.initial_state)
         records.append({
             "algorithm": "hc",
+            "objective": objective_name,
             "experiment": f"run_{i}",
             "population": 1,
             "iterations": result.iterations,
@@ -152,13 +156,16 @@ def run_sa_experiments(
     seeds: Sequence[int] = (42, 100, 2026),
     initial_temperature: float = 100.0,
     max_iterations: int = 1000,
+    objective_name: str = "value",
 ) -> int:
     target_dir = Path(output_dir)
     target_dir.mkdir(parents=True, exist_ok=True)
     records = []
+    objective = get_objective(objective_name)
     config = {
         "initial_temperature": initial_temperature,
         "max_iterations": max_iterations,
+        "objective": objective_name,
     }
 
     print(f"\n--- Menjalankan 3 Eksperimen Simulated Annealing ---")
@@ -178,6 +185,7 @@ def run_sa_experiments(
         stuck_count = result.metadata.get("stuck_count", 0)
         records.append({
             "algorithm": "sa",
+            "objective": objective_name,
             "experiment": f"run_{i}",
             "population": 1,
             "iterations": result.iterations,
@@ -202,10 +210,12 @@ def run_ga_experiments(
     iter_variants: Sequence[int] = (25, 50, 100),
     control_iter: int = 50,
     pop_variants: Sequence[int] = (10, 20, 40),
+    objective_name: str = "value",
 ) -> int:
     target_dir = Path(output_dir)
     target_dir.mkdir(parents=True, exist_ok=True)
     records = []
+    objective = get_objective(objective_name)
 
     total_runs = len(iter_variants) * len(seeds) + len(pop_variants) * len(seeds)
     current_run = 0
@@ -217,7 +227,7 @@ def run_ga_experiments(
         for seed in seeds:
             current_run += 1
             print(f"Run {current_run}/{total_runs} (Kelompok A): Pop={control_pop}, Iter={iters}, Seed={seed}...")
-            config = {"population_size": control_pop, "max_iterations": iters}
+            config = {"population_size": control_pop, "max_iterations": iters, "objective": objective_name}
             result = genetic_algorithm.solve(problem, config=config, seed=seed)
 
             stem = f"ga_kelompokA_pop_{control_pop}_iter_{iters}_seed_{seed}"
@@ -230,6 +240,7 @@ def run_ga_experiments(
             initial_obj = objective(problem, result.initial_state)
             records.append({
                 "algorithm": "ga",
+                "objective": objective_name,
                 "experiment": f"KelompokA_pop_{control_pop}_iter_{iters}",
                 "population": control_pop,
                 "iterations": iters,
@@ -248,7 +259,7 @@ def run_ga_experiments(
         for seed in seeds:
             current_run += 1
             print(f"Run {current_run}/{total_runs} (Kelompok B): Pop={pop}, Iter={control_iter}, Seed={seed}...")
-            config = {"population_size": pop, "max_iterations": control_iter}
+            config = {"population_size": pop, "max_iterations": control_iter, "objective": objective_name}
             result = genetic_algorithm.solve(problem, config=config, seed=seed)
 
             stem = f"ga_kelompokB_pop_{pop}_iter_{control_iter}_seed_{seed}"
@@ -261,6 +272,7 @@ def run_ga_experiments(
             initial_obj = objective(problem, result.initial_state)
             records.append({
                 "algorithm": "ga",
+                "objective": objective_name,
                 "experiment": f"KelompokB_pop_{pop}_iter_{control_iter}",
                 "population": pop,
                 "iterations": control_iter,
