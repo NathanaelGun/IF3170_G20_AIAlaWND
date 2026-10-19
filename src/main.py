@@ -4,21 +4,21 @@ from pathlib import Path
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from src.algorithms import genetic_algorithm, hill_climbing, simulated_annealing
+from src.algorithms import genetic_algorithm, hill_climbing, hill_climbing_variants, simulated_annealing
 from src.core import coordinate_map, objective, oriented_dimensions
 from src.core.io import load_problem, save_result
 
 
-def run_search(problem, algorithm: str, config: dict, seed: int | None):
-    if algorithm == "hc":
-        result = hill_climbing.solve(problem, config, seed)
-    elif algorithm == "sa":
-        result = simulated_annealing.solve(problem, config, seed)
-    elif algorithm == "ga":
-        result = genetic_algorithm.solve(problem, config, seed)
-    else:
+def run_search(problem, config, seed, algorithm="hc"):
+    solvers = {"hc": hill_climbing.solve,
+               "sa": simulated_annealing.solve,
+               "ga": genetic_algorithm.solve,
+               "hc_sideways": hill_climbing_variants.solve_sideways,
+               "hc_random_restart": hill_climbing_variants.solve_random_restart,
+               "hc_stochastic": hill_climbing_variants.solve_stochastic}
+    if algorithm not in solvers:
         raise ValueError(f"Unknown algorithm: {algorithm}")
-
+    result = solvers[algorithm](problem, config, seed)
     if objective(problem, result.final_state) != result.final_objective:
         raise ValueError("Algorithm returned an inconsistent final objective")
     return result
@@ -53,8 +53,16 @@ def print_state(problem, state, title):
 def print_result(problem, result):
     print_state(problem, result.initial_state, "State awal")
     print_state(problem, result.final_state, "State akhir")
-    print(f"\n{result.algorithm.upper()}: objective={result.final_objective}, iterations={result.iterations}, "
+    variant = result.parameters.get("variant", result.algorithm)
+    print(f"\n{result.algorithm.upper()} ({variant}): objective={result.final_objective}, iterations={result.iterations}, "
           f"duration={result.duration_seconds:.6f}s, stop={result.stop_reason}")
+    if variant == "sideways":
+        print(f"Sideways move (total): {result.metadata['sideways_moves']}")
+        print(f"Sideways berturut-turut: {result.metadata['consecutive_sideways_moves']}")
+    elif variant == "random_restart":
+        print(f"Jumlah restart: {result.metadata['restart_count']}")
+        print(f"Iterasi per run (0 = run awal): {result.metadata['iterations_per_restart']}")
+        print(f"Run dengan hasil terbaik: {result.metadata['best_restart']}")
 
     if result.algorithm == "sa":
         stuck = result.metadata.get("stuck_count", 0)
@@ -165,13 +173,16 @@ def choose_algorithm():
         print("2. Simulated Annealing")
         print("3. Genetic Algorithm")
         print("4. Eksperimen Hill-Climbing (3 run)")
-        print("5. Eksperimen Simulated Annealing (3 run)")
-        print("6. Eksperimen Genetic Algorithm (18 run)")
+        print("5. Hill-Climbing with Sideways Move")
+        print("6. Random Restart Hill-Climbing")
+        print("7. Stochastic Hill-Climbing")
+        print("8. Eksperimen Simulated Annealing (3 run)")
+        print("9. Eksperimen Genetic Algorithm (18 run)")
         print("0. Keluar")
         choice = read_nonempty("Pilihan")
-        if choice in ("0", "1", "2", "3", "4", "5", "6"):
+        if choice in ("0", "1", "2", "3", "4", "5", "6", "7", "8", "9"):
             return choice
-        print("Pilihan tidak valid. Silakan pilih 0 - 6.")
+        print("Pilihan tidak valid. Silakan pilih 0 - 9.")
 
 
 def save_interactive_plots(result, output_path: Path):
@@ -180,9 +191,7 @@ def save_interactive_plots(result, output_path: Path):
     parent = output_path.parent
 
     if result.algorithm == "hc":
-        plot_path = parent / f"{stem}_objective.png"
-        plot_objective(result, plot_path)
-        print(f"Grafik objective: {plot_path.resolve()}")
+        save_objective_plot(result, output_path)
     elif result.algorithm == "sa":
         plot_path = parent / f"{stem}_objective.png"
         plot_objective(result, plot_path)
@@ -194,6 +203,29 @@ def save_interactive_plots(result, output_path: Path):
         plot_path = parent / f"{stem}_progress.png"
         plot_ga_progress(result, plot_path)
         print(f"Grafik GA progress: {plot_path.resolve()}")
+
+
+def save_objective_plot(result, output):
+    from matplotlib.figure import Figure
+
+    plot_path = output.with_name(output.stem + "_objective.png")
+    figure = Figure(figsize=(8, 4.5))
+    axis = figure.subplots()
+    iterations = [entry["iteration"] for entry in result.history]
+    axis.step(iterations, [entry["objective"] for entry in result.history], where="post", label="Objective")
+    if result.parameters.get("variant") == "random_restart":
+        axis.step(iterations, [entry["best_objective"] for entry in result.history],
+                  where="post", linestyle="--", label="Terbaik sejauh ini")
+        for entry in result.history:
+            if entry.get("event") == "restart":
+                axis.axvline(entry["iteration"], color="gray", alpha=0.3, linestyle=":")
+    axis.set(xlabel="Iterasi", ylabel="Objective",
+             title=f"Hill-Climbing: {result.parameters.get('variant', 'steepest_ascent')}")
+    axis.grid(alpha=0.3)
+    axis.legend()
+    figure.tight_layout()
+    figure.savefig(plot_path, dpi=150)
+    print(f"Grafik: {plot_path.resolve()}")
 
 
 def save_interactive_result(problem, result):
@@ -209,11 +241,20 @@ def save_interactive_result(problem, result):
         except OSError as error:
             print(f"Gagal menyimpan: {error}")
 
-    if read_yes_no(f"Buat grafik visualisasi untuk {result.algorithm.upper()}?"):
+    if read_yes_no(f"Buat grafik dan buka jendela 3D untuk {result.algorithm.upper()}?"):
         try:
             save_interactive_plots(result, output)
         except (ImportError, OSError) as error:
             print(f"Grafik gagal dibuat: {error}. Pastikan matplotlib terinstal.")
+        try:
+            from src.visualization import save_result_3d, show_result_3d
+            image_path = output.with_name(output.stem + "_states_3d.png")
+            save_result_3d(problem, result, image_path)
+            print(f"Gambar state 3D: {image_path.resolve()}")
+            print("Tutup jendela 3D untuk kembali ke terminal.")
+            show_result_3d(problem, result)
+        except (ImportError, OSError, RuntimeError, ValueError) as error:
+            print(f"Visualisasi 3D gagal: {error}. JSON hasil tetap tersimpan.")
 
 
 def interactive():
@@ -227,32 +268,35 @@ def interactive():
     if choice == "0":
         return 0
 
-    if choice in ("4", "5", "6"):
-        from experiments.runner import run_ga_experiments, run_hc_experiments, run_sa_experiments
+    if choice in ("4", "8", "9"):
         seeds = read_experiment_seeds()
-        default_folder = f"output/{'hc' if choice == '4' else 'sa' if choice == '5' else 'ga'}"
-        folder_input = input(f"Folder hasil eksperimen (default '{default_folder}'): ").strip()
-        output_dir = Path(folder_input if folder_input else default_folder)
-
-        try:
-            if choice == "4":
-                return run_hc_experiments(problem, output_dir=output_dir, seeds=seeds)
-            elif choice == "5":
-                return run_sa_experiments(problem, output_dir=output_dir, seeds=seeds)
-            else:
+        default_folder = f"output/{'hc' if choice == '4' else 'sa' if choice == '8' else 'ga'}"
+        while True:
+            folder_input = input(f"Folder hasil eksperimen (default '{default_folder}'): ").strip()
+            output_dir = Path(folder_input if folder_input else default_folder)
+            try:
+                if choice == "4":
+                    from experiments.run_hc import main as run_experiments
+                    return run_experiments(input_path=input_path, output_dir=output_dir, seeds=seeds)
+                from experiments.runner import run_ga_experiments, run_sa_experiments
+                if choice == "8":
+                    return run_sa_experiments(problem, output_dir=output_dir, seeds=seeds)
                 return run_ga_experiments(problem, output_dir=output_dir, seeds=seeds)
-        except (ImportError, OSError) as error:
-            print(f"Eksperimen gagal: {error}")
-            return 1
-
-    # Single search execution
+            except OSError as error:
+                print(f"Folder output tidak valid: {error}")
+            except ImportError as error:
+                print(f"Eksperimen gagal: {error}")
+                return 1
     config = {}
-    algo_key = "hc" if choice == "1" else "sa" if choice == "2" else "ga"
+    algorithms = {"1": "hc", "2": "sa", "3": "ga", "5": "hc_sideways",
+                  "6": "hc_random_restart", "7": "hc_stochastic"}
+    algo_key = algorithms[choice]
 
     seed = read_integer("Seed acak", default=42)
 
-    if algo_key == "hc":
-        limit = read_integer("Maksimum iterasi", minimum=0, allow_unlimited=True, default=None)
+    if algo_key.startswith("hc"):
+        limit = read_integer("Maksimum iterasi", minimum=0, allow_unlimited=algo_key != "hc_stochastic",
+                             default=1000 if algo_key == "hc_stochastic" else None)
         if limit is not None:
             config["max_iterations"] = limit
     elif algo_key == "sa":
@@ -266,8 +310,12 @@ def interactive():
         config["population_size"] = pop
         config["max_iterations"] = limit
 
+    if algo_key == "hc_sideways":
+        config["max_sideways_moves"] = read_integer("Maksimum sideways move berturut-turut", minimum=0)
+    elif algo_key == "hc_random_restart":
+        config["max_restarts"] = read_integer("Maksimum restart (setelah run awal)", minimum=0)
     print(f"\nMembuat initial state random dan menjalankan pencarian ({algo_key.upper()})...")
-    result = run_search(problem, algo_key, config, seed)
+    result = run_search(problem, config, seed, algorithm=algo_key)
     print_result(problem, result)
     save_interactive_result(problem, result)
     return 0
