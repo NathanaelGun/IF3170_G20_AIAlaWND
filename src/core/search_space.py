@@ -3,7 +3,7 @@ from itertools import combinations
 from random import Random
 from typing import Iterator
 
-from .geometry import is_valid
+from .geometry import is_valid, oriented_dimensions
 from .models import ORIENTATIONS, Placement, Problem, State
 
 
@@ -114,3 +114,44 @@ def sample_neighbor(problem: Problem, state: State, rng: Random) -> State | None
         if rng.randrange(count) == 0:
             chosen = candidate
     return chosen
+
+
+def random_neighbor(problem: Problem, state: State, rng: Random, tries: int = 100) -> State | None:
+    if not problem.packages:
+        return None
+    ids = [p.id for p in problem.packages]
+    n = len(ids)
+    available_moves = ["move", "rotate", "swap"] if n >= 2 else ["move", "rotate"]
+
+    for _ in range(tries):
+        move_type = rng.choice(available_moves)
+        if move_type == "swap":
+            a, b = rng.sample(ids, 2)
+            candidate = swap_packages(state, a, b)
+        elif move_type == "rotate":
+            pkg_id = rng.choice(ids)
+            axis = rng.choice(("x", "y", "z"))
+            candidate = rotate_package(state, pkg_id, axis)
+        else:  # move
+            pkg_id = rng.choice(ids)
+            if rng.random() < 0.5:
+                # Coba tempatkan di dalam truk
+                inside_tops = [
+                    state.placements[other.id].position[2] + oriented_dimensions(other, state.placements[other.id])[2]
+                    for other in problem.packages
+                    if other.id != pkg_id and state.placements[other.id].inside
+                ]
+                possible_z = [0] + [z for z in inside_tops if z < problem.truck.dimensions.h]
+                z = rng.choice(possible_z)
+                x = rng.randrange(problem.truck.dimensions.w)
+                y = rng.randrange(problem.truck.dimensions.l)
+                candidate = move_package(state, pkg_id, (x, y, z), True)
+            else:
+                # Pindahkan ke slot parkir luar
+                slot = rng.randrange(n)
+                candidate = move_package(state, pkg_id, outside_position(problem, slot), False)
+
+        if candidate.placements != state.placements and is_valid(problem, candidate):
+            return candidate
+
+    return None

@@ -1,0 +1,156 @@
+{
+  "truck": {
+    "dimensions": {
+      "w": 10,
+      "l": 20,
+      "h": 5
+    },
+    "max_capacity": 500.0
+  },
+  "packages": [
+    {
+      "id": "AIAlaWND_P01",
+      "dimensions": {
+        "w": 3,
+        "l": 4,
+        "h": 1
+      },
+      "value": 60.0,
+      "weight": 5.0,
+      "is_fragile": false,
+      "eta": 3
+    },
+    {
+      "id": "AIAlaWND_P02",
+      "dimensions": {
+        "w": 4,
+        "l": 4,
+        "h": 2
+      },
+      "value": 80.0,
+      "weight": 25.0,
+      "is_fragile": false,
+      "eta": 2
+    },
+    {
+      "id": "AIAlaWND_P03_Fragile",
+      "dimensions": {
+        "w": 2,
+        "l": 3,
+        "h": 2
+      },
+      "value": 120.0,
+      "weight": 10.0,
+      "is_fragile": true,
+      "eta": 1
+    },
+    {
+      "id": "AIAlaWND_P04",
+      "dimensions": {
+        "w": 5,
+        "l": 6,
+        "h": 2
+      },
+      "value": 150.0,
+      "weight": 40.0,
+      "is_fragile": false,
+      "eta": 4
+    },
+    {
+      "id": "AIAlaWND_P05",
+      "dimensions": {
+        "w": 3,
+        "l": 5,
+        "h": 1
+      },
+      "value": 75.0,
+      "weight": 15.0,
+      "is_fragile": false,
+      "eta": 2
+    },
+    {
+      "id": "AIAlaWND_P06_Fragile",
+      "dimensions": {
+        "w": 2,
+        "l": 2,
+        "h": 2
+      },
+      "value": 110.0,
+      "weight": 12.0,
+      "is_fragile": true,
+      "eta": 3
+    },
+    {
+      "id": "AIAlaWND_P07",
+      "dimensions": {
+        "w": 4,
+        "l": 5,
+        "h": 2
+      },
+      "value": 95.0,
+      "weight": 30.0,
+      "is_fragile": false,
+      "eta": 5
+    },
+    {
+      "id": "AIAlaWND_P08",
+      "dimensions": {
+        "w": 3,
+        "l": 3,
+        "h": 1
+      },
+      "value": 50.0,
+      "weight": 8.0,
+      "is_fragile": false,
+      "eta": 1
+    },
+    {
+      "id": "AIAlaWND_P09_Fragile",
+      "dimensions": {
+        "w": 2,
+        "l": 4,
+        "h": 2
+      },
+      "value": 130.0,
+      "weight": 14.0,
+      "is_fragile": true,
+      "eta": 2
+    },
+    {
+      "id": "AIAlaWND_P10",
+      "dimensions": {
+        "w": 5,
+        "l": 8,
+        "h": 2
+      },
+      "value": 200.0,
+      "weight": 60.0,
+      "is_fragile": false,
+      "eta": 3
+    },
+    {
+      "id": "AIAlaWND_P11",
+      "dimensions": {
+        "w": 3,
+        "l": 6,
+        "h": 2
+      },
+      "value": 105.0,
+      "weight": 22.0,
+      "is_fragile": false,
+      "eta": 4
+    },
+    {
+      "id": "AIAlaWND_P12",
+      "dimensions": {
+        "w": 2,
+        "l": 5,
+        "h": 1
+      },
+      "value": 70.0,
+      "weight": 12.0,
+      "is_fragile": false,
+      "eta": 2
+    }
+  ]
+}
