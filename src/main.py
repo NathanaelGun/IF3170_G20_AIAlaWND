@@ -1,4 +1,5 @@
 import sys
+from math import isfinite
 from pathlib import Path
 
 if __package__ in (None, ""):
@@ -70,7 +71,7 @@ def print_result(problem, result):
 
     if result.algorithm == "sa":
         stuck = result.metadata.get("stuck_count", 0)
-        print(f"Frekuensi stuck di local optima (stagnasi): {stuck}")
+        print(f"Frekuensi masuk local optima (tanpa neighbor yang lebih baik): {stuck}")
 
     if result.algorithm == "ga" and result.history:
         last = result.history[-1]
@@ -93,16 +94,12 @@ def read_nonempty(label):
         print("Input tidak boleh kosong.")
 
 
-def read_integer(label, minimum=None, allow_unlimited=False, default=None):
+def read_integer(label, minimum=None, allow_unlimited=False):
     hint = f"bilangan bulat >= {minimum}" if minimum is not None else "bilangan bulat"
     if allow_unlimited:
         hint += " atau 'tanpa'"
-    if default is not None:
-        hint += f", default {default}"
     while True:
-        text = input(f"{label} ({hint}): ").strip()
-        if not text and default is not None:
-            return default
+        text = read_nonempty(f"{label} ({hint})")
         if allow_unlimited and text.lower() == "tanpa":
             return None
         try:
@@ -114,17 +111,13 @@ def read_integer(label, minimum=None, allow_unlimited=False, default=None):
         print(f"Masukkan {hint}.")
 
 
-def read_float(label, minimum=None, default=None):
+def read_float(label, minimum=None):
     hint = f"bilangan real >= {minimum}" if minimum is not None else "bilangan real"
-    if default is not None:
-        hint += f", default {default}"
     while True:
-        text = input(f"{label} ({hint}): ").strip()
-        if not text and default is not None:
-            return default
+        text = read_nonempty(f"{label} ({hint})")
         try:
             value = float(text)
-            if minimum is None or value >= minimum:
+            if isfinite(value) and (minimum is None or value >= minimum):
                 return value
         except ValueError:
             pass
@@ -143,15 +136,7 @@ def read_yes_no(label):
 
 def read_experiment_seeds():
     seeds = []
-    print("Masukkan 3 seed untuk eksperimen (tekan Enter untuk memakai default: 42, 100, 2026):")
-    first = input("Seed eksperimen 1 (default 42): ").strip()
-    if not first:
-        return (42, 100, 2026)
-    try:
-        seeds.append(int(first))
-    except ValueError:
-        seeds.append(42)
-
+    print("Masukkan 3 seed berbeda untuk eksperimen:")
     while len(seeds) < 3:
         seed = read_integer(f"Seed eksperimen {len(seeds) + 1}")
         if seed in seeds:
@@ -159,6 +144,44 @@ def read_experiment_seeds():
             continue
         seeds.append(seed)
     return tuple(seeds)
+
+
+def read_experiment_variants(label, minimum):
+    values = []
+    while len(values) < 3:
+        value = read_integer(f"{label} {len(values) + 1}", minimum=minimum)
+        if value in values:
+            print("Nilai variasi eksperimen harus berbeda.")
+            continue
+        values.append(value)
+    return tuple(values)
+
+
+def read_hc_experiment_runs(seeds):
+    variants = {"1": "steepest_ascent", "2": "sideways",
+                "3": "random_restart", "4": "stochastic"}
+    runs = []
+    for index, seed in enumerate(seeds, 1):
+        print(f"\n=== Jenis Hill-Climbing untuk run {index}/{len(seeds)} (seed {seed}) ===")
+        print("1. Steepest Ascent Hill-Climbing")
+        print("2. Hill-Climbing with Sideways Move")
+        print("3. Random Restart Hill-Climbing")
+        print("4. Stochastic Hill-Climbing")
+        while True:
+            choice = read_nonempty("Pilihan jenis HC")
+            if choice in variants:
+                break
+            print("Pilihan tidak valid. Silakan pilih 1 - 4.")
+        variant = variants[choice]
+        config = {"variant": variant,
+                  "max_iterations": read_integer("Maksimum iterasi run ini", minimum=0,
+                                                  allow_unlimited=variant != "stochastic")}
+        if variant == "sideways":
+            config["max_sideways_moves"] = read_integer("Maksimum total sideways move", minimum=0)
+        elif variant == "random_restart":
+            config["max_restarts"] = read_integer("Maksimum restart (setelah run awal)", minimum=0)
+        runs.append(config)
+    return tuple(runs)
 
 
 def read_problem():
@@ -173,10 +196,10 @@ def read_problem():
 def choose_objective():
     while True:
         print("\n=== Pilihan Objective Function ===")
-        print("1. value        : total value paket di dalam truk (objective spesifikasi, default)")
+        print("1. value        : total value paket di dalam truk (objective spesifikasi)")
         print("2. eta_priority : total value / (1 + eta) paket di dalam truk (prioritas paket ber-ETA kecil)")
-        choice = input("Pilihan objective (default 1): ").strip()
-        if choice in ("", "1"):
+        choice = read_nonempty("Pilihan objective")
+        if choice == "1":
             return "value"
         if choice == "2":
             return "eta_priority"
@@ -288,23 +311,31 @@ def interactive():
 
     if choice in ("4", "8", "9"):
         seeds = read_experiment_seeds()
-        default_folder = f"output/{'hc' if choice == '4' else 'sa' if choice == '8' else 'ga'}"
-        if objective_name != "value":
-            default_folder += f"_{objective_name}"
+        if choice == "4":
+            parameters = {"run_configs": read_hc_experiment_runs(seeds)}
+        elif choice == "8":
+            parameters = {"initial_temperature": read_float("Temperatur awal (T0)", minimum=0.001),
+                          "max_iterations": read_integer("Maksimum iterasi per run", minimum=1)}
+        else:
+            print("Kelompok A: populasi tetap, 3 variasi iterasi. Kelompok B: iterasi tetap, 3 variasi populasi.")
+            control_pop = read_integer("Populasi kontrol (kelompok A)", minimum=2)
+            iter_variants = read_experiment_variants("Variasi iterasi (kelompok A)", minimum=1)
+            control_iter = read_integer("Iterasi kontrol (kelompok B)", minimum=1)
+            pop_variants = read_experiment_variants("Variasi populasi (kelompok B)", minimum=2)
+            parameters = {"control_pop": control_pop, "iter_variants": iter_variants,
+                          "control_iter": control_iter, "pop_variants": pop_variants}
         while True:
-            folder_input = input(f"Folder hasil eksperimen (default '{default_folder}'): ").strip()
-            output_dir = Path(folder_input if folder_input else default_folder)
+            output_dir = Path(read_nonempty("Folder hasil eksperimen"))
             try:
+                from experiments.runner import run_hc_experiments, run_ga_experiments, run_sa_experiments
                 if choice == "4":
-                    from experiments.run_hc import main as run_experiments
-                    return run_experiments(input_path=input_path, output_dir=output_dir, seeds=seeds,
-                                           objective_name=objective_name)
-                from experiments.runner import run_ga_experiments, run_sa_experiments
+                    return run_hc_experiments(problem, output_dir=output_dir, seeds=seeds,
+                                           objective_name=objective_name, **parameters)
                 if choice == "8":
                     return run_sa_experiments(problem, output_dir=output_dir, seeds=seeds,
-                                              objective_name=objective_name)
+                                              objective_name=objective_name, **parameters)
                 return run_ga_experiments(problem, output_dir=output_dir, seeds=seeds,
-                                          objective_name=objective_name)
+                                          objective_name=objective_name, **parameters)
             except OSError as error:
                 print(f"Folder output tidak valid: {error}")
             except ImportError as error:
@@ -315,26 +346,24 @@ def interactive():
                   "6": "hc_random_restart", "7": "hc_stochastic"}
     algo_key = algorithms[choice]
 
-    seed = read_integer("Seed acak", default=42)
+    seed = read_integer("Seed acak")
 
     if algo_key.startswith("hc"):
-        limit = read_integer("Maksimum iterasi", minimum=0, allow_unlimited=algo_key != "hc_stochastic",
-                             default=1000 if algo_key == "hc_stochastic" else None)
-        if limit is not None:
-            config["max_iterations"] = limit
+        limit = read_integer("Maksimum iterasi", minimum=0, allow_unlimited=algo_key != "hc_stochastic")
+        config["max_iterations"] = limit
     elif algo_key == "sa":
-        temp = read_float("Temperatur awal (T0)", minimum=0.001, default=100.0)
-        limit = read_integer("Maksimum iterasi", minimum=1, default=1000)
+        temp = read_float("Temperatur awal (T0)", minimum=0.001)
+        limit = read_integer("Maksimum iterasi", minimum=1)
         config["initial_temperature"] = temp
         config["max_iterations"] = limit
     elif algo_key == "ga":
-        pop = read_integer("Jumlah populasi", minimum=2, default=20)
-        limit = read_integer("Banyak iterasi (generasi)", minimum=1, default=50)
+        pop = read_integer("Jumlah populasi", minimum=2)
+        limit = read_integer("Banyak iterasi (generasi)", minimum=1)
         config["population_size"] = pop
         config["max_iterations"] = limit
 
     if algo_key == "hc_sideways":
-        config["max_sideways_moves"] = read_integer("Maksimum sideways move berturut-turut", minimum=0)
+        config["max_sideways_moves"] = read_integer("Maksimum total sideways move", minimum=0)
     elif algo_key == "hc_random_restart":
         config["max_restarts"] = read_integer("Maksimum restart (setelah run awal)", minimum=0)
     print(f"\nMembuat initial state random dan menjalankan pencarian ({algo_key.upper()})...")
@@ -348,7 +377,6 @@ def main() -> int:
     try:
         return interactive()
     except (EOFError, KeyboardInterrupt):
-        print("\nProgram dihentikan.")
         return 0
 
 

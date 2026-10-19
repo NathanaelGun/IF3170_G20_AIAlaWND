@@ -1,11 +1,7 @@
-
-
 from random import Random
 from time import perf_counter
-
 from src.core import Problem, SearchResult, State, get_objective, is_valid, random_state, random_successor
 from src.core.models import integer
-
 from . import hill_climbing
 
 
@@ -20,17 +16,14 @@ def _validate_config(config: dict | None, extra: set[str]) -> dict:
     get_objective(config["objective"])
     return config
 
-
-def solve_sideways(problem: Problem, config: dict | None = None,
-                   seed: int | None = None) -> SearchResult:
+def solve_sideways(problem: Problem, config: dict | None = None, seed: int | None = None) -> SearchResult:
     config = _validate_config(config, {"max_sideways_moves"})
     config.setdefault("max_sideways_moves", 100)
     integer(config["max_sideways_moves"], "max_sideways_moves", 0)
     return _climb(problem, config, seed)
 
 
-def solve_stochastic(problem: Problem, config: dict | None = None,
-                     seed: int | None = None) -> SearchResult:
+def solve_stochastic(problem: Problem, config: dict | None = None,seed: int | None = None) -> SearchResult:
     config = _validate_config(config, set())
     limit = config.get("max_iterations")
     if limit is None:
@@ -52,25 +45,22 @@ def solve_stochastic(problem: Problem, config: dict | None = None,
     for iterations in range(1, limit + 1):
         candidate = random_successor(problem, current, rng)
         if candidate is None:
-            history.append({"iteration": iterations, "objective": value, "accepted": False,
-                            "neighbors_evaluated": 0})
-            reason = "no_valid_neighbor"
+            history.append({"iteration": iterations, "objective": value, "accepted": False, "neighbors_evaluated": 0})
+            reason = "sampling_attempts_exhausted"
             break
         candidate_value = score(problem, candidate)
         accepted = candidate_value > value
         if accepted:
             current, value = candidate, candidate_value
             accepted_moves += 1
-        history.append({"iteration": iterations, "objective": value, "accepted": accepted,
-                        "neighbors_evaluated": 1})
+        history.append({"iteration": iterations, "objective": value, "accepted": accepted, "neighbors_evaluated": 1})
     return SearchResult("hc", {"variant": "stochastic", "max_iterations": limit,
                                "objective": config["objective"]}, seed,
                         initial, current.copy(), value, perf_counter() - started, iterations, history,
                         stop_reason=reason, metadata={"accepted_moves": accepted_moves})
 
 
-def solve_random_restart(problem: Problem, config: dict | None = None,
-                         seed: int | None = None) -> SearchResult:
+def solve_random_restart(problem: Problem, config: dict | None = None, seed: int | None = None) -> SearchResult:
     config = _validate_config(config, {"max_restarts"})
     max_restarts = config.get("max_restarts", 10)
     integer(max_restarts, "max_restarts", 0)
@@ -95,8 +85,7 @@ def solve_random_restart(problem: Problem, config: dict | None = None,
         for entry in result.history:
             best_value = entry["objective"] if best_value is None else max(best_value, entry["objective"])
             row = {**entry, "iteration": iterations + entry["iteration"],
-                   "restart": restart, "run_iteration": entry["iteration"],
-                   "best_objective": best_value}
+                   "restart": restart, "run_iteration": entry["iteration"], "best_objective": best_value}
             if entry["iteration"] == 0:
                 row["event"] = "initial" if restart == 0 else "restart"
             history.append(row)
@@ -106,8 +95,7 @@ def solve_random_restart(problem: Problem, config: dict | None = None,
         accepted_moves += result.metadata["accepted_moves"]
         runs.append({"restart": restart, "seed": run_seed, "iterations": result.iterations,
                      "initial_objective": result.history[0]["objective"],
-                     "final_objective": result.final_objective,
-                     "initial_state": result.initial_state.to_dict(),
+                     "final_objective": result.final_objective, "initial_state": result.initial_state.to_dict(),
                      "final_state": result.final_state.to_dict(),
                      "duration_seconds": result.duration_seconds, "stop_reason": result.stop_reason})
 
@@ -141,7 +129,7 @@ def _climb(problem: Problem, config: dict, seed: int | None) -> SearchResult:
     def record(accepted: bool, evaluated: int, is_sideways: bool = False) -> None:
         entry = {"iteration": scans, "objective": value, "accepted": accepted,
                  "neighbors_evaluated": evaluated}
-        entry.update(sideways=is_sideways, sideways_moves=sideways_moves,
+        entry.update(sideways=is_sideways, sideways_moves=sideways_moves, 
                      consecutive_sideways_moves=consecutive_sideways_moves)
         history.append(entry)
 
@@ -150,7 +138,7 @@ def _climb(problem: Problem, config: dict, seed: int | None) -> SearchResult:
         chosen, chosen_value, evaluated = hill_climbing._best_neighbor(
             problem, current, value, rng, allow_equal=True, score=score)
         scans += 1
-        accepted = chosen is not None and (chosen_value > value or consecutive_sideways_moves < sideways_limit)
+        accepted = chosen is not None and (chosen_value > value or sideways_moves < sideways_limit)
         is_sideways = accepted and chosen_value == value
         if accepted:
             current, value = chosen, chosen_value
@@ -161,7 +149,7 @@ def _climb(problem: Problem, config: dict, seed: int | None) -> SearchResult:
         if not accepted:
             reason = "max_sideways_moves" if chosen is not None else "no_improving_neighbor"
             break
-        if is_sideways and consecutive_sideways_moves == sideways_limit:
+        if is_sideways and sideways_moves == sideways_limit:
             reason = "max_sideways_moves"
             break
 

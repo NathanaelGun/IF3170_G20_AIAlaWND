@@ -1,0 +1,3161 @@
+{
+  "schema_version": 2,
+  "algorithm": "hc",
+  "parameters": {
+    "variant": "sideways",
+    "max_iterations": null,
+    "max_sideways_moves": 20,
+    "objective": "value"
+  },
+  "seed": 11,
+  "initial_state": {
+    "placements": {
+      "AIAlaWND_P01": {
+        "position": [
+          1,
+          10,
+          0
+        ],
+        "orientation": [
+          "x",
+          "y",
+          "z"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P02": {
+        "position": [
+          7,
+          3,
+          0
+        ],
+        "orientation": [
+          "y",
+          "z",
+          "x"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P03_Fragile": {
+        "position": [
+          29,
+          0,
+          0
+        ],
+        "orientation": [
+          "y",
+          "x",
+          "z"
+        ],
+        "truck_index": null,
+        "inside": false
+      },
+      "AIAlaWND_P04": {
+        "position": [
+          38,
+          0,
+          0
+        ],
+        "orientation": [
+          "x",
+          "z",
+          "y"
+        ],
+        "truck_index": null,
+        "inside": false
+      },
+      "AIAlaWND_P05": {
+        "position": [
+          47,
+          0,
+          0
+        ],
+        "orientation": [
+          "x",
+          "z",
+          "y"
+        ],
+        "truck_index": null,
+        "inside": false
+      },
+      "AIAlaWND_P06_Fragile": {
+        "position": [
+          8,
+          0,
+          0
+        ],
+        "orientation": [
+          "y",
+          "x",
+          "z"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P07": {
+        "position": [
+          3,
+          0,
+          0
+        ],
+        "orientation": [
+          "z",
+          "y",
+          "x"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P08": {
+        "position": [
+          1,
+          7,
+          0
+        ],
+        "orientation": [
+          "y",
+          "z",
+          "x"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P09_Fragile": {
+        "position": [
+          2,
+          10,
+          2
+        ],
+        "orientation": [
+          "z",
+          "x",
+          "y"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P10": {
+        "position": [
+          5,
+          1,
+          0
+        ],
+        "orientation": [
+          "z",
+          "y",
+          "x"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P11": {
+        "position": [
+          5,
+          10,
+          0
+        ],
+        "orientation": [
+          "x",
+          "y",
+          "z"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P12": {
+        "position": [
+          2,
+          11,
+          1
+        ],
+        "orientation": [
+          "x",
+          "y",
+          "z"
+        ],
+        "truck_index": 0,
+        "inside": true
+      }
+    }
+  },
+  "final_state": {
+    "placements": {
+      "AIAlaWND_P01": {
+        "position": [
+          6,
+          16,
+          0
+        ],
+        "orientation": [
+          "x",
+          "y",
+          "z"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P02": {
+        "position": [
+          2,
+          12,
+          0
+        ],
+        "orientation": [
+          "y",
+          "z",
+          "x"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P03_Fragile": {
+        "position": [
+          2,
+          4,
+          3
+        ],
+        "orientation": [
+          "y",
+          "x",
+          "z"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P04": {
+        "position": [
+          38,
+          0,
+          0
+        ],
+        "orientation": [
+          "x",
+          "z",
+          "y"
+        ],
+        "truck_index": null,
+        "inside": false
+      },
+      "AIAlaWND_P05": {
+        "position": [
+          1,
+          19,
+          0
+        ],
+        "orientation": [
+          "x",
+          "z",
+          "y"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P06_Fragile": {
+        "position": [
+          3,
+          16,
+          0
+        ],
+        "orientation": [
+          "y",
+          "x",
+          "z"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P07": {
+        "position": [
+          7,
+          3,
+          0
+        ],
+        "orientation": [
+          "z",
+          "y",
+          "x"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P08": {
+        "position": [
+          3,
+          5,
+          0
+        ],
+        "orientation": [
+          "y",
+          "z",
+          "x"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P09_Fragile": {
+        "position": [
+          6,
+          12,
+          3
+        ],
+        "orientation": [
+          "z",
+          "x",
+          "y"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P10": {
+        "position": [
+          5,
+          1,
+          0
+        ],
+        "orientation": [
+          "z",
+          "y",
+          "x"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P11": {
+        "position": [
+          7,
+          13,
+          1
+        ],
+        "orientation": [
+          "x",
+          "y",
+          "z"
+        ],
+        "truck_index": 0,
+        "inside": true
+      },
+      "AIAlaWND_P12": {
+        "position": [
+          0,
+          7,
+          0
+        ],
+        "orientation": [
+          "x",
+          "y",
+          "z"
+        ],
+        "truck_index": 0,
+        "inside": true
+      }
+    }
+  },
+  "final_objective": 1095.0,
+  "duration_seconds": 45.63434699999925,
+  "iterations": 22,
+  "history": [
+    {
+      "iteration": 0,
+      "objective": 900.0,
+      "accepted": false,
+      "neighbors_evaluated": 0,
+      "sideways": false,
+      "sideways_moves": 0,
+      "consecutive_sideways_moves": 0
+    },
+    {
+      "iteration": 1,
+      "objective": 1020.0,
+      "accepted": true,
+      "neighbors_evaluated": 830,
+      "sideways": false,
+      "sideways_moves": 0,
+      "consecutive_sideways_moves": 0
+    },
+    {
+      "iteration": 2,
+      "objective": 1095.0,
+      "accepted": true,
+      "neighbors_evaluated": 737,
+      "sideways": false,
+      "sideways_moves": 0,
+      "consecutive_sideways_moves": 0
+    },
+    {
+      "iteration": 3,
+      "objective": 1095.0,
+      "accepted": true,
+      "neighbors_evaluated": 715,
+      "sideways": true,
+      "sideways_moves": 1,
+      "consecutive_sideways_moves": 1
+    },
+    {
+      "iteration": 4,
+      "objective": 1095.0,
+      "accepted": true,
+      "neighbors_evaluated": 719,
+      "sideways": true,
+      "sideways_moves": 2,
+      "consecutive_sideways_moves": 2
+    },
+    {
+      "iteration": 5,
+      "objective": 1095.0,
+      "accepted": true,
+      "neighbors_evaluated": 731,
+      "sideways": true,
+      "sideways_moves": 3,
+      "consecutive_sideways_moves": 3
+    },
+    {
+      "iteration": 6,
+      "objective": 1095.0,
+      "accepted": true,
+      "neighbors_evaluated": 794,
+      "sideways": true,
+      "sideways_moves": 4,
+      "consecutive_sideways_moves": 4
+    },
+    {
+      "iteration": 7,
+      "objective": 1095.0,
+      "accepted": true,
+      "neighbors_evaluated": 769,
+      "sideways": true,
+      "sideways_moves": 5,
+      "consecutive_sideways_moves": 5
+    },
+    {
+      "iteration": 8,
+      "objective": 1095.0,
+      "accepted": true,
+      "neighbors_evaluated": 708,
+      "sideways": true,
+      "sideways_moves": 6,
+      "consecutive_sideways_moves": 6
+    },
+    {
+      "iteration": 9,
+      "objective": 1095.0,
+      "accepted": true,
+      "neighbors_evaluated": 734,
+      "sideways": true,
+      "sideways_moves": 7,
+      "consecutive_sideways_moves": 7
+    },
+    {
+      "iteration": 10,
+      "objective": 1095.0,
+      "accepted": true,
+      "neighbors_evaluated": 736,
+      "sideways": true,
+      "sideways_moves": 8,
+      "consecutive_sideways_moves": 8
+    },
+    {
+      "iteration": 11,
+      "objective": 1095.0,
+      "accepted": true,
+      "neighbors_evaluated": 830,
+      "sideways": true,
+      "sideways_moves": 9,
+      "consecutive_sideways_moves": 9
+    },
+    {
+      "iteration": 12,
+      "objective": 1095.0,
+      "accepted": true,
+      "neighbors_evaluated": 855,
+      "sideways": true,
+      "sideways_moves": 10,
+      "consecutive_sideways_moves": 10
+    },
+    {
+      "iteration": 13,
+      "objective": 1095.0,
+      "accepted": true,
+      "neighbors_evaluated": 830,
+      "sideways": true,
+      "sideways_moves": 11,
+      "consecutive_sideways_moves": 11
+    },
+    {
+      "iteration": 14,
+      "objective": 1095.0,
+      "accepted": true,
+      "neighbors_evaluated": 746,
+      "sideways": true,
+      "sideways_moves": 12,
+      "consecutive_sideways_moves": 12
+    },
+    {
+      "iteration": 15,
+      "objective": 1095.0,
+      "accepted": true,
+      "neighbors_evaluated": 753,
+      "sideways": true,
+      "sideways_moves": 13,
+      "consecutive_sideways_moves": 13
+    },
+    {
+      "iteration": 16,
+      "objective": 1095.0,
+      "accepted": true,
+      "neighbors_evaluated": 631,
+      "sideways": true,
+      "sideways_moves": 14,
+      "consecutive_sideways_moves": 14
+    },
+    {
+      "iteration": 17,
+      "objective": 1095.0,
+      "accepted": true,
+      "neighbors_evaluated": 609,
+      "sideways": true,
+      "sideways_moves": 15,
+      "consecutive_sideways_moves": 15
+    },
+    {
+      "iteration": 18,
+      "objective": 1095.0,
+      "accepted": true,
+      "neighbors_evaluated": 650,
+      "sideways": true,
+      "sideways_moves": 16,
+      "consecutive_sideways_moves": 16
+    },
+    {
+      "iteration": 19,
+      "objective": 1095.0,
+      "accepted": true,
+      "neighbors_evaluated": 712,
+      "sideways": true,
+      "sideways_moves": 17,
+      "consecutive_sideways_moves": 17
+    },
+    {
+      "iteration": 20,
+      "objective": 1095.0,
+      "accepted": true,
+      "neighbors_evaluated": 699,
+      "sideways": true,
+      "sideways_moves": 18,
+      "consecutive_sideways_moves": 18
+    },
+    {
+      "iteration": 21,
+      "objective": 1095.0,
+      "accepted": true,
+      "neighbors_evaluated": 650,
+      "sideways": true,
+      "sideways_moves": 19,
+      "consecutive_sideways_moves": 19
+    },
+    {
+      "iteration": 22,
+      "objective": 1095.0,
+      "accepted": true,
+      "neighbors_evaluated": 616,
+      "sideways": true,
+      "sideways_moves": 20,
+      "consecutive_sideways_moves": 20
+    }
+  ],
+  "initial_population": [],
+  "stop_reason": "max_sideways_moves",
+  "is_stub": false,
+  "metadata": {
+    "accepted_moves": 22,
+    "sideways_moves": 20,
+    "consecutive_sideways_moves": 20
+  },
+  "problem": {
+    "trucks": [
+      {
+        "dimensions": {
+          "w": 10,
+          "l": 20,
+          "h": 5
+        },
+        "max_capacity": 500.0
+      }
+    ],
+    "packages": [
+      {
+        "id": "AIAlaWND_P01",
+        "dimensions": {
+          "w": 3,
+          "l": 4,
+          "h": 1
+        },
+        "value": 60.0,
+        "weight": 5.0,
+        "is_fragile": false,
+        "eta": 3
+      },
+      {
+        "id": "AIAlaWND_P02",
+        "dimensions": {
+          "w": 4,
+          "l": 4,
+          "h": 2
+        },
+        "value": 80.0,
+        "weight": 25.0,
+        "is_fragile": false,
+        "eta": 2
+      },
+      {
+        "id": "AIAlaWND_P03_Fragile",
+        "dimensions": {
+          "w": 2,
+          "l": 3,
+          "h": 2
+        },
+        "value": 120.0,
+        "weight": 10.0,
+        "is_fragile": true,
+        "eta": 1
+      },
+      {
+        "id": "AIAlaWND_P04",
+        "dimensions": {
+          "w": 5,
+          "l": 6,
+          "h": 2
+        },
+        "value": 150.0,
+        "weight": 40.0,
+        "is_fragile": false,
+        "eta": 4
+      },
+      {
+        "id": "AIAlaWND_P05",
+        "dimensions": {
+          "w": 3,
+          "l": 5,
+          "h": 1
+        },
+        "value": 75.0,
+        "weight": 15.0,
+        "is_fragile": false,
+        "eta": 2
+      },
+      {
+        "id": "AIAlaWND_P06_Fragile",
+        "dimensions": {
+          "w": 2,
+          "l": 2,
+          "h": 2
+        },
+        "value": 110.0,
+        "weight": 12.0,
+        "is_fragile": true,
+        "eta": 3
+      },
+      {
+        "id": "AIAlaWND_P07",
+        "dimensions": {
+          "w": 4,
+          "l": 5,
+          "h": 2
+        },
+        "value": 95.0,
+        "weight": 30.0,
+        "is_fragile": false,
+        "eta": 5
+      },
+      {
+        "id": "AIAlaWND_P08",
+        "dimensions": {
+          "w": 3,
+          "l": 3,
+          "h": 1
+        },
+        "value": 50.0,
+        "weight": 8.0,
+        "is_fragile": false,
+        "eta": 1
+      },
+      {
+        "id": "AIAlaWND_P09_Fragile",
+        "dimensions": {
+          "w": 2,
+          "l": 4,
+          "h": 2
+        },
+        "value": 130.0,
+        "weight": 14.0,
+        "is_fragile": true,
+        "eta": 2
+      },
+      {
+        "id": "AIAlaWND_P10",
+        "dimensions": {
+          "w": 5,
+          "l": 8,
+          "h": 2
+        },
+        "value": 200.0,
+        "weight": 60.0,
+        "is_fragile": false,
+        "eta": 3
+      },
+      {
+        "id": "AIAlaWND_P11",
+        "dimensions": {
+          "w": 3,
+          "l": 6,
+          "h": 2
+        },
+        "value": 105.0,
+        "weight": 22.0,
+        "is_fragile": false,
+        "eta": 4
+      },
+      {
+        "id": "AIAlaWND_P12",
+        "dimensions": {
+          "w": 2,
+          "l": 5,
+          "h": 1
+        },
+        "value": 70.0,
+        "weight": 12.0,
+        "is_fragile": false,
+        "eta": 2
+      }
+    ]
+  },
+  "initial_coordinate_map": [
+    [
+      [
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null,
+          null,
+          null,
+          "AIAlaWND_P06_Fragile",
+          "AIAlaWND_P06_Fragile"
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          "AIAlaWND_P06_Fragile",
+          "AIAlaWND_P06_Fragile"
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P08",
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P08",
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P08",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P01",
+          "AIAlaWND_P01",
+          "AIAlaWND_P01",
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P01",
+          "AIAlaWND_P01",
+          "AIAlaWND_P01",
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P01",
+          "AIAlaWND_P01",
+          "AIAlaWND_P01",
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P01",
+          "AIAlaWND_P01",
+          "AIAlaWND_P01",
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null,
+          null,
+          null,
+          "AIAlaWND_P06_Fragile",
+          "AIAlaWND_P06_Fragile"
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          "AIAlaWND_P06_Fragile",
+          "AIAlaWND_P06_Fragile"
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P08",
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P08",
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P08",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P12",
+          "AIAlaWND_P12",
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P12",
+          "AIAlaWND_P12",
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P12",
+          "AIAlaWND_P12",
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P12",
+          "AIAlaWND_P12",
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P12",
+          "AIAlaWND_P12",
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P08",
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P08",
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P08",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ]
+    ]
+  ],
+  "final_coordinate_map": [
+    [
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P08",
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P08",
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null
+        ],
+        [
+          "AIAlaWND_P12",
+          "AIAlaWND_P12",
+          null,
+          "AIAlaWND_P08",
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null
+        ],
+        [
+          "AIAlaWND_P12",
+          "AIAlaWND_P12",
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          "AIAlaWND_P12",
+          "AIAlaWND_P12",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "AIAlaWND_P12",
+          "AIAlaWND_P12",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "AIAlaWND_P12",
+          "AIAlaWND_P12",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P06_Fragile",
+          "AIAlaWND_P06_Fragile",
+          null,
+          "AIAlaWND_P01",
+          "AIAlaWND_P01",
+          "AIAlaWND_P01",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P06_Fragile",
+          "AIAlaWND_P06_Fragile",
+          null,
+          "AIAlaWND_P01",
+          "AIAlaWND_P01",
+          "AIAlaWND_P01",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P01",
+          "AIAlaWND_P01",
+          "AIAlaWND_P01",
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P05",
+          "AIAlaWND_P05",
+          "AIAlaWND_P05",
+          null,
+          null,
+          "AIAlaWND_P01",
+          "AIAlaWND_P01",
+          "AIAlaWND_P01",
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P08",
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P08",
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P08",
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null,
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11"
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null,
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11"
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null,
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11"
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P06_Fragile",
+          "AIAlaWND_P06_Fragile",
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11"
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P06_Fragile",
+          "AIAlaWND_P06_Fragile",
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11"
+        ],
+        [
+          null,
+          "AIAlaWND_P05",
+          "AIAlaWND_P05",
+          "AIAlaWND_P05",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P08",
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P08",
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "AIAlaWND_P08",
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null,
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11"
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null,
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11"
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null,
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P11",
+          "AIAlaWND_P11",
+          "AIAlaWND_P11"
+        ],
+        [
+          null,
+          "AIAlaWND_P05",
+          "AIAlaWND_P05",
+          "AIAlaWND_P05",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P03_Fragile",
+          "AIAlaWND_P03_Fragile",
+          "AIAlaWND_P03_Fragile",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P03_Fragile",
+          "AIAlaWND_P03_Fragile",
+          "AIAlaWND_P03_Fragile",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          "AIAlaWND_P07",
+          "AIAlaWND_P07",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null,
+          null,
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile"
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null,
+          null,
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile"
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P02",
+          "AIAlaWND_P02",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P05",
+          "AIAlaWND_P05",
+          "AIAlaWND_P05",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P03_Fragile",
+          "AIAlaWND_P03_Fragile",
+          "AIAlaWND_P03_Fragile",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "AIAlaWND_P03_Fragile",
+          "AIAlaWND_P03_Fragile",
+          "AIAlaWND_P03_Fragile",
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P10",
+          "AIAlaWND_P10",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile",
+          "AIAlaWND_P09_Fragile"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "AIAlaWND_P05",
+          "AIAlaWND_P05",
+          "AIAlaWND_P05",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ]
+    ]
+  ]
+}
