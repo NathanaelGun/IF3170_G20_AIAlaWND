@@ -239,11 +239,20 @@ def save_interactive_result(problem, result):
         except OSError as error:
             print(f"Gagal menyimpan: {error}")
 
-    if read_yes_no(f"Buat grafik visualisasi untuk {result.algorithm.upper()}?"):
+    if read_yes_no(f"Buat grafik dan buka jendela 3D untuk {result.algorithm.upper()}?"):
         try:
             save_interactive_plots(result, output)
         except (ImportError, OSError) as error:
             print(f"Grafik gagal dibuat: {error}. Pastikan matplotlib terinstal.")
+        try:
+            from src.visualization import save_result_3d, show_result_3d
+            image_path = output.with_name(output.stem + "_states_3d.png")
+            save_result_3d(problem, result, image_path)
+            print(f"Gambar state 3D: {image_path.resolve()}")
+            print("Tutup jendela 3D untuk kembali ke terminal.")
+            show_result_3d(problem, result)
+        except (ImportError, OSError, RuntimeError, ValueError) as error:
+            print(f"Visualisasi 3D gagal: {error}. JSON hasil tetap tersimpan.")
 
 
 def interactive():
