@@ -155,3 +155,44 @@ def random_neighbor(problem: Problem, state: State, rng: Random, tries: int = 10
             return candidate
 
     return None
+
+
+def random_successor(problem: Problem, state: State, rng: Random) -> State | None:
+    
+    if not is_valid(problem, state):
+        raise ValueError("Random successor requires a valid source state")
+    ids = [package.id for package in problem.packages]
+    n = len(ids)
+    d = problem.truck.dimensions
+    volume = d.w * d.l * d.h
+    swap_count = n * (n - 1) // 2
+    move_count = n * (volume + n)
+    remaining = swap_count + move_count + 3 * n
+    shuffled = {}
+    while remaining:
+    
+        slot = rng.randrange(remaining)
+        action = shuffled.get(slot, slot)
+        remaining -= 1
+        shuffled[slot] = shuffled.get(remaining, remaining)
+        if action < swap_count:
+            first = 0
+            while action >= n - first - 1:
+                action -= n - first - 1
+                first += 1
+            candidate = swap_packages(state, ids[first], ids[first + 1 + action])
+        elif action < swap_count + move_count:
+            package_index, position_index = divmod(action - swap_count, volume + n)
+            if position_index < volume:
+                z, floor_index = divmod(position_index, d.w * d.l)
+                y, x = divmod(floor_index, d.w)
+                candidate = move_package(state, ids[package_index], (x, y, z), True)
+            else:
+                position = outside_position(problem, position_index - volume)
+                candidate = move_package(state, ids[package_index], position, False)
+        else:
+            package_index, axis_index = divmod(action - swap_count - move_count, 3)
+            candidate = rotate_package(state, ids[package_index], ("x", "y", "z")[axis_index])
+        if candidate != state and is_valid(problem, candidate):
+            return candidate
+    return None
