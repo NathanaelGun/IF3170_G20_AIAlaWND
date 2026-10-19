@@ -4,13 +4,21 @@ from pathlib import Path
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from src.algorithms import hill_climbing
+from src.algorithms import genetic_algorithm, hill_climbing, simulated_annealing
 from src.core import coordinate_map, objective, oriented_dimensions
 from src.core.io import load_problem, save_result
 
 
-def run_search(problem, config, seed):
-    result = hill_climbing.solve(problem, config, seed)
+def run_search(problem, algorithm: str, config: dict, seed: int | None):
+    if algorithm == "hc":
+        result = hill_climbing.solve(problem, config, seed)
+    elif algorithm == "sa":
+        result = simulated_annealing.solve(problem, config, seed)
+    elif algorithm == "ga":
+        result = genetic_algorithm.solve(problem, config, seed)
+    else:
+        raise ValueError(f"Unknown algorithm: {algorithm}")
+
     if objective(problem, result.final_state) != result.final_objective:
         raise ValueError("Algorithm returned an inconsistent final objective")
     return result
@@ -45,7 +53,22 @@ def print_result(problem, result):
     print_state(problem, result.final_state, "State akhir")
     print(f"\n{result.algorithm.upper()}: objective={result.final_objective}, iterations={result.iterations}, "
           f"duration={result.duration_seconds:.6f}s, stop={result.stop_reason}")
-    print("Riwayat objective: " + " -> ".join(f"{h['iteration']}:{h['objective']}" for h in result.history))
+
+    if result.algorithm == "sa":
+        stuck = result.metadata.get("stuck_count", 0)
+        print(f"Frekuensi stuck di local optima (stagnasi): {stuck}")
+
+    if result.algorithm == "ga" and result.history:
+        last = result.history[-1]
+        print(f"Populasi akhir - Maksimum: {last.get('max_objective')}, Rata-rata: {last.get('mean_objective'):.2f}")
+
+    hist = result.history
+    if len(hist) <= 30:
+        print("Riwayat objective: " + " -> ".join(f"{h['iteration']}:{h['objective']}" for h in hist))
+    else:
+        first_part = " -> ".join(f"{h['iteration']}:{h['objective']}" for h in hist[:10])
+        last_part = " -> ".join(f"{h['iteration']}:{h['objective']}" for h in hist[-10:])
+        print(f"Riwayat objective ({len(hist)} entri): {first_part} -> ... -> {last_part}")
 
 
 def read_nonempty(label):
@@ -56,16 +79,37 @@ def read_nonempty(label):
         print("Input tidak boleh kosong.")
 
 
-def read_integer(label, minimum=None, allow_unlimited=False):
+def read_integer(label, minimum=None, allow_unlimited=False, default=None):
     hint = f"bilangan bulat >= {minimum}" if minimum is not None else "bilangan bulat"
     if allow_unlimited:
         hint += " atau 'tanpa'"
+    if default is not None:
+        hint += f", default {default}"
     while True:
         text = input(f"{label} ({hint}): ").strip()
+        if not text and default is not None:
+            return default
         if allow_unlimited and text.lower() == "tanpa":
             return None
         try:
             value = int(text)
+            if minimum is None or value >= minimum:
+                return value
+        except ValueError:
+            pass
+        print(f"Masukkan {hint}.")
+
+
+def read_float(label, minimum=None, default=None):
+    hint = f"bilangan real >= {minimum}" if minimum is not None else "bilangan real"
+    if default is not None:
+        hint += f", default {default}"
+    while True:
+        text = input(f"{label} ({hint}): ").strip()
+        if not text and default is not None:
+            return default
+        try:
+            value = float(text)
             if minimum is None or value >= minimum:
                 return value
         except ValueError:
@@ -85,6 +129,15 @@ def read_yes_no(label):
 
 def read_experiment_seeds():
     seeds = []
+    print("Masukkan 3 seed untuk eksperimen (tekan Enter untuk memakai default: 42, 100, 2026):")
+    first = input("Seed eksperimen 1 (default 42): ").strip()
+    if not first:
+        return (42, 100, 2026)
+    try:
+        seeds.append(int(first))
+    except ValueError:
+        seeds.append(42)
+
     while len(seeds) < 3:
         seed = read_integer(f"Seed eksperimen {len(seeds) + 1}")
         if seed in seeds:
@@ -105,25 +158,40 @@ def read_problem():
 
 def choose_algorithm():
     while True:
-        print("\n1. Hill-Climbing\n2. Simulated Annealing\n3. Genetic Algorithm\n4. Tiga eksperimen HC\n0. Keluar")
+        print("\n=== Menu Pilihan Algoritma Local Search ===")
+        print("1. Hill-Climbing (Steepest Ascent)")
+        print("2. Simulated Annealing")
+        print("3. Genetic Algorithm")
+        print("4. Eksperimen Hill-Climbing (3 run)")
+        print("5. Eksperimen Simulated Annealing (3 run)")
+        print("6. Eksperimen Genetic Algorithm (18 run)")
+        print("0. Keluar")
         choice = read_nonempty("Pilihan")
-        if choice == "0":
-            return None
-        if choice == "4":
-            return "experiments"
-        if choice == "1":
-            return "hc"
-        if choice in ("2", "3"):
-            print("Algoritma belum diimplementasikan. Pilih Hill-Climbing.")
-            continue
-        print("Pilih 0, 1, 2, 3, atau 4.")
+        if choice in ("0", "1", "2", "3", "4", "5", "6"):
+            return choice
+        print("Pilihan tidak valid. Silakan pilih 0 - 6.")
 
 
-def save_objective_plot(result, output):
-    from experiments.run_hc import plot_result
-    plot_path = output.with_name(output.stem + "_objective.png")
-    plot_result(result, plot_path)
-    print(f"Grafik: {plot_path.resolve()}")
+def save_interactive_plots(result, output_path: Path):
+    from experiments.runner import plot_ga_progress, plot_objective, plot_sa_probability
+    stem = output_path.stem
+    parent = output_path.parent
+
+    if result.algorithm == "hc":
+        plot_path = parent / f"{stem}_objective.png"
+        plot_objective(result, plot_path)
+        print(f"Grafik objective: {plot_path.resolve()}")
+    elif result.algorithm == "sa":
+        plot_path = parent / f"{stem}_objective.png"
+        plot_objective(result, plot_path)
+        prob_path = parent / f"{stem}_exp_delta_over_t.png"
+        plot_sa_probability(result, prob_path)
+        print(f"Grafik objective: {plot_path.resolve()}")
+        print(f"Grafik exp(ΔE/T): {prob_path.resolve()}")
+    elif result.algorithm == "ga":
+        plot_path = parent / f"{stem}_progress.png"
+        plot_ga_progress(result, plot_path)
+        print(f"Grafik GA progress: {plot_path.resolve()}")
 
 
 def save_interactive_result(problem, result):
@@ -138,40 +206,65 @@ def save_interactive_result(problem, result):
             break
         except OSError as error:
             print(f"Gagal menyimpan: {error}")
-    if result.algorithm == "hc" and read_yes_no("Buat grafik objective HC?"):
+
+    if read_yes_no(f"Buat grafik visualisasi untuk {result.algorithm.upper()}?"):
         try:
-            save_objective_plot(result, output)
+            save_interactive_plots(result, output)
         except (ImportError, OSError) as error:
-            print(f"Grafik gagal dibuat: {error}. Instal matplotlib dan periksa lokasi output.")
+            print(f"Grafik gagal dibuat: {error}. Pastikan matplotlib terinstal.")
 
 
 def interactive():
-    print("Optimasi Pengisian Paket Truk")
+    print("=== Optimasi Pengisian Paket Truk (IF3170 Local Search) ===")
     input_path, problem = read_problem()
     d = problem.truck.dimensions
     print(f"Truk {d.w} x {d.l} x {d.h}, kapasitas {problem.truck.max_capacity}, {len(problem.packages)} paket")
-    algorithm = choose_algorithm()
-    if algorithm is None:
+
+    choice = choose_algorithm()
+    if choice == "0":
         return 0
-    if algorithm == "experiments":
-        from experiments.run_hc import main as run_experiments
+
+    if choice in ("4", "5", "6"):
+        from experiments.runner import run_ga_experiments, run_hc_experiments, run_sa_experiments
         seeds = read_experiment_seeds()
-        while True:
-            output_dir = Path(read_nonempty("Folder hasil eksperimen"))
-            try:
-                return run_experiments(input_path=input_path, output_dir=output_dir, seeds=seeds)
-            except OSError as error:
-                print(f"Folder output tidak valid: {error}")
-            except ImportError as error:
-                print(f"Eksperimen gagal: {error}")
-                return 1
-    seed = read_integer("Seed")
-    limit = read_integer("Maksimum iterasi", minimum=0, allow_unlimited=True)
+        default_folder = f"output/{'hc' if choice == '4' else 'sa' if choice == '5' else 'ga'}"
+        folder_input = input(f"Folder hasil eksperimen (default '{default_folder}'): ").strip()
+        output_dir = Path(folder_input if folder_input else default_folder)
+
+        try:
+            if choice == "4":
+                return run_hc_experiments(problem, output_dir=output_dir, seeds=seeds)
+            elif choice == "5":
+                return run_sa_experiments(problem, output_dir=output_dir, seeds=seeds)
+            else:
+                return run_ga_experiments(problem, output_dir=output_dir, seeds=seeds)
+        except (ImportError, OSError) as error:
+            print(f"Eksperimen gagal: {error}")
+            return 1
+
+    # Single search execution
     config = {}
-    if limit is not None:
+    algo_key = "hc" if choice == "1" else "sa" if choice == "2" else "ga"
+
+    seed = read_integer("Seed acak", default=42)
+
+    if algo_key == "hc":
+        limit = read_integer("Maksimum iterasi", minimum=0, allow_unlimited=True, default=None)
+        if limit is not None:
+            config["max_iterations"] = limit
+    elif algo_key == "sa":
+        temp = read_float("Temperatur awal (T0)", minimum=0.001, default=100.0)
+        limit = read_integer("Maksimum iterasi", minimum=1, default=1000)
+        config["initial_temperature"] = temp
         config["max_iterations"] = limit
-    print("\nMembuat initial state random dan menjalankan pencarian...")
-    result = run_search(problem, config, seed)
+    elif algo_key == "ga":
+        pop = read_integer("Jumlah populasi", minimum=2, default=20)
+        limit = read_integer("Banyak iterasi (generasi)", minimum=1, default=50)
+        config["population_size"] = pop
+        config["max_iterations"] = limit
+
+    print(f"\nMembuat initial state random dan menjalankan pencarian ({algo_key.upper()})...")
+    result = run_search(problem, algo_key, config, seed)
     print_result(problem, result)
     save_interactive_result(problem, result)
     return 0
