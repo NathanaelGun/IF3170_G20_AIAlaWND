@@ -2,7 +2,7 @@ from dataclasses import replace
 from random import Random
 from time import perf_counter
 
-from src.core import Problem, SearchResult, State, empty_state, is_valid, objective, random_neighbor, random_state
+from src.core import Problem, SearchResult, State, empty_state, get_objective, is_valid, random_neighbor, random_state
 from src.core.models import integer
 
 CROSSOVER_RATE = 0.8
@@ -76,10 +76,12 @@ def _mutate(problem: Problem, individual: State, rng: Random) -> State:
 
 def solve(problem: Problem, config: dict | None = None, seed: int | None = None) -> SearchResult:
     config = dict(config or {})
-    unknown = set(config) - {"population_size", "max_iterations"}
+    unknown = set(config) - {"population_size", "max_iterations", "objective"}
     if unknown:
         raise ValueError(f"Unknown GA parameters: {sorted(unknown)}")
 
+    objective_name = config.get("objective", "value")
+    objective = get_objective(objective_name)
     population_size = config.get("population_size", 20)
     max_iterations = config.get("max_iterations", 50)
 
@@ -146,6 +148,7 @@ def solve(problem: Problem, config: dict | None = None, seed: int | None = None)
         parameters={
             "population_size": population_size,
             "max_iterations": max_iterations,
+            "objective": objective_name,
         },
         seed=seed,
         initial_state=initial_best,

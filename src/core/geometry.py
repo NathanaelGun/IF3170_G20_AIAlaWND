@@ -40,7 +40,8 @@ def validation_errors(problem: Problem, state: State) -> list[str]:
             if not all(0 <= low[i] and high[i] <= truck_bounds[1][i] for i in range(3)):
                 errors.append(f"{key}: inside package crosses truck boundary")
     for key, other in combinations(packages, 2):
-        if state.placements[key].truck_index == state.placements[other].truck_index and overlap(boxes[key], boxes[other]):
+        idx_a, idx_b = state.placements[key].truck_index, state.placements[other].truck_index
+        if idx_a is not None and idx_a == idx_b and overlap(boxes[key], boxes[other]):
             errors.append(f"{key}/{other}: packages overlap")
     for index, truck in enumerate(problem.trucks):
         inside = [key for key, p in state.placements.items() if p.truck_index == index]
@@ -69,6 +70,26 @@ def objective(problem: Problem, state: State) -> float:
     if errors:
         raise ValueError("Invalid state: " + "; ".join(errors))
     return sum(p.value for p in problem.packages if state.placements[p.id].inside)
+
+
+def objective_eta_priority(problem: Problem, state: State) -> float:
+    """Objective alternatif: value paket di dalam truk dibobot urgensi ETA, yaitu sum(value / (1 + eta)).
+
+    Paket dengan ETA kecil (harus segera sampai) bernilai lebih tinggi. Hanya memakai atribut yang sudah ada.
+    """
+    errors = validation_errors(problem, state)
+    if errors:
+        raise ValueError("Invalid state: " + "; ".join(errors))
+    return round(sum(p.value / (1 + p.eta) for p in problem.packages if state.placements[p.id].inside), 6)
+
+
+OBJECTIVES = {"value": objective, "eta_priority": objective_eta_priority}
+
+
+def get_objective(name: str = "value"):
+    if name not in OBJECTIVES:
+        raise ValueError(f"Unknown objective: {name}. Pilihan: {sorted(OBJECTIVES)}")
+    return OBJECTIVES[name]
 
 def coordinate_map(problem: Problem, state: State) -> list:
     if not is_valid(problem, state):

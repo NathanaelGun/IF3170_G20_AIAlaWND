@@ -5,7 +5,7 @@ if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from src.algorithms import genetic_algorithm, hill_climbing, hill_climbing_variants, simulated_annealing
-from src.core import coordinate_map, objective, oriented_dimensions
+from src.core import coordinate_map, get_objective, objective, oriented_dimensions
 from src.core.io import load_problem, save_result
 
 
@@ -19,13 +19,15 @@ def run_search(problem, config, seed, algorithm="hc"):
     if algorithm not in solvers:
         raise ValueError(f"Unknown algorithm: {algorithm}")
     result = solvers[algorithm](problem, config, seed)
-    if objective(problem, result.final_state) != result.final_objective:
+    if get_objective(config.get("objective", "value"))(problem, result.final_state) != result.final_objective:
         raise ValueError("Algorithm returned an inconsistent final objective")
     return result
 
 
-def print_state(problem, state, title):
-    print(f"\n{title} | value={objective(problem, state)}")
+def print_state(problem, state, title, objective_name="value"):
+    score_text = "" if objective_name == "value" else \
+        f" | {objective_name}={get_objective(objective_name)(problem, state)}"
+    print(f"\n{title} | value={objective(problem, state)}{score_text}")
     headers = ("Paket", "Status", "Truk", "Posisi x,y,z", "Orientasi w,l,h", "Ukuran x,y,z",
                "Value", "Berat", "Fragile", "ETA")
     rows = []
@@ -51,10 +53,12 @@ def print_state(problem, state, title):
                 print(f"{y:>4} " + " ".join(f"{cell or '.':>{width}}" for cell in row))
 
 def print_result(problem, result):
-    print_state(problem, result.initial_state, "State awal")
-    print_state(problem, result.final_state, "State akhir")
+    objective_name = result.parameters.get("objective", "value")
+    print_state(problem, result.initial_state, "State awal", objective_name)
+    print_state(problem, result.final_state, "State akhir", objective_name)
     variant = result.parameters.get("variant", result.algorithm)
-    print(f"\n{result.algorithm.upper()} ({variant}): objective={result.final_objective}, iterations={result.iterations}, "
+    print(f"\n{result.algorithm.upper()} ({variant}): objective[{objective_name}]={result.final_objective}, "
+          f"iterations={result.iterations}, "
           f"duration={result.duration_seconds:.6f}s, stop={result.stop_reason}")
     if variant == "sideways":
         print(f"Sideways move (total): {result.metadata['sideways_moves']}")
@@ -166,6 +170,19 @@ def read_problem():
             print(f"Input tidak valid: {error}")
 
 
+def choose_objective():
+    while True:
+        print("\n=== Pilihan Objective Function ===")
+        print("1. value        : total value paket di dalam truk (objective spesifikasi, default)")
+        print("2. eta_priority : total value / (1 + eta) paket di dalam truk (prioritas paket ber-ETA kecil)")
+        choice = input("Pilihan objective (default 1): ").strip()
+        if choice in ("", "1"):
+            return "value"
+        if choice == "2":
+            return "eta_priority"
+        print("Pilihan tidak valid. Silakan pilih 1 atau 2.")
+
+
 def choose_algorithm():
     while True:
         print("\n=== Menu Pilihan Algoritma Local Search ===")
@@ -264,6 +281,7 @@ def interactive():
     for index, truck in enumerate(problem.trucks):
         d = truck.dimensions
         print(f"Truk {index + 1}: {d.w} x {d.l} x {d.h}, kapasitas {truck.max_capacity}")
+    objective_name = choose_objective()
     choice = choose_algorithm()
     if choice == "0":
         return 0
@@ -271,23 +289,28 @@ def interactive():
     if choice in ("4", "8", "9"):
         seeds = read_experiment_seeds()
         default_folder = f"output/{'hc' if choice == '4' else 'sa' if choice == '8' else 'ga'}"
+        if objective_name != "value":
+            default_folder += f"_{objective_name}"
         while True:
             folder_input = input(f"Folder hasil eksperimen (default '{default_folder}'): ").strip()
             output_dir = Path(folder_input if folder_input else default_folder)
             try:
                 if choice == "4":
                     from experiments.run_hc import main as run_experiments
-                    return run_experiments(input_path=input_path, output_dir=output_dir, seeds=seeds)
+                    return run_experiments(input_path=input_path, output_dir=output_dir, seeds=seeds,
+                                           objective_name=objective_name)
                 from experiments.runner import run_ga_experiments, run_sa_experiments
                 if choice == "8":
-                    return run_sa_experiments(problem, output_dir=output_dir, seeds=seeds)
-                return run_ga_experiments(problem, output_dir=output_dir, seeds=seeds)
+                    return run_sa_experiments(problem, output_dir=output_dir, seeds=seeds,
+                                              objective_name=objective_name)
+                return run_ga_experiments(problem, output_dir=output_dir, seeds=seeds,
+                                          objective_name=objective_name)
             except OSError as error:
                 print(f"Folder output tidak valid: {error}")
             except ImportError as error:
                 print(f"Eksperimen gagal: {error}")
                 return 1
-    config = {}
+    config = {"objective": objective_name}
     algorithms = {"1": "hc", "2": "sa", "3": "ga", "5": "hc_sideways",
                   "6": "hc_random_restart", "7": "hc_stochastic"}
     algo_key = algorithms[choice]

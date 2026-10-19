@@ -1,0 +1,33 @@
+{
+  "trucks": [
+    {
+      "dimensions": { "w": 5, "l": 6, "h": 4 },
+      "max_capacity": 150.0
+    },
+    {
+      "dimensions": { "w": 6, "l": 8, "h": 4 },
+      "max_capacity": 250.0
+    },
+    {
+      "dimensions": { "w": 8, "l": 10, "h": 5 },
+      "max_capacity": 400.0
+    }
+  ],
+  "packages": [
+    { "id": "P01_Small", "dimensions": { "w": 2, "l": 2, "h": 2 }, "value": 40.0, "weight": 20.0, "is_fragile": false, "eta": 1 },
+    { "id": "P02_Fragile1", "dimensions": { "w": 2, "l": 3, "h": 1 }, "value": 75.0, "weight": 10.0, "is_fragile": true, "eta": 2 },
+    { "id": "P03_Heavy1", "dimensions": { "w": 3, "l": 3, "h": 2 }, "value": 60.0, "weight": 80.0, "is_fragile": false, "eta": 4 },
+    { "id": "P04_Medium", "dimensions": { "w": 3, "l": 4, "h": 2 }, "value": 90.0, "weight": 35.0, "is_fragile": false, "eta": 2 },
+    { "id": "P05_Fragile2", "dimensions": { "w": 2, "l": 2, "h": 1 }, "value": 85.0, "weight": 12.0, "is_fragile": true, "eta": 1 },
+    { "id": "P06_Big1", "dimensions": { "w": 4, "l": 4, "h": 2 }, "value": 110.0, "weight": 70.0, "is_fragile": false, "eta": 3 },
+    { "id": "P07_Long", "dimensions": { "w": 2, "l": 5, "h": 1 }, "value": 55.0, "weight": 25.0, "is_fragile": false, "eta": 5 },
+    { "id": "P08_Heavy2", "dimensions": { "w": 3, "l": 3, "h": 2 }, "value": 80.0, "weight": 90.0, "is_fragile": false, "eta": 2 },
+    { "id": "P09_Fragile3", "dimensions": { "w": 3, "l": 3, "h": 1 }, "value": 120.0, "weight": 15.0, "is_fragile": true, "eta": 1 },
+    { "id": "P10_Medium2", "dimensions": { "w": 3, "l": 3, "h": 2 }, "value": 65.0, "weight": 30.0, "is_fragile": false, "eta": 3 },
+    { "id": "P11_Big2", "dimensions": { "w": 4, "l": 5, "h": 2 }, "value": 130.0, "weight": 75.0, "is_fragile": false, "eta": 4 },
+    { "id": "P12_Small2", "dimensions": { "w": 2, "l": 2, "h": 1 }, "value": 30.0, "weight": 10.0, "is_fragile": false, "eta": 2 },
+    { "id": "P13_Fragile4", "dimensions": { "w": 2, "l": 3, "h": 1 }, "value": 95.0, "weight": 14.0, "is_fragile": true, "eta": 1 },
+    { "id": "P14_Heavy3", "dimensions": { "w": 3, "l": 4, "h": 2 }, "value": 100.0, "weight": 110.0, "is_fragile": false, "eta": 3 },
+    { "id": "P15_ValueHigh", "dimensions": { "w": 3, "l": 3, "h": 2 }, "value": 150.0, "weight": 40.0, "is_fragile": false, "eta": 1 }
+  ]
+}

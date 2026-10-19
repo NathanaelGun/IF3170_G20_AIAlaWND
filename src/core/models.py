@@ -70,6 +70,10 @@ class Problem:
             raise ValueError("Problem must contain at least one truck")
 
     @property
+    def truck(self) -> Truck:
+        return self.trucks[0]
+
+    @property
     def package_by_id(self) -> dict[str, Package]:
         return {p.id: p for p in self.packages}
 
