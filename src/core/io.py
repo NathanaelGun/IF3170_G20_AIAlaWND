@@ -2,12 +2,23 @@ import json
 from pathlib import Path
 
 from .geometry import coordinate_map
-from .models import Dimensions, Package, Placement, Problem, SearchResult, State, Truck
+from .models import Dimensions, Package, Placement, Problem, SearchResult, State, Truck, integer
 
-
+# dana, baca input dari list trucks, bukan objek truck
 def problem_from_dict(data: dict) -> Problem:
-    truck_data = data["truck"]
-    truck = Truck(Dimensions(**truck_data["dimensions"]), truck_data["max_capacity"])
+    trucks = []
+    if "trucks" in data:
+        for truck_data in data["trucks"]:
+            trucks.append(Truck(
+                Dimensions(**truck_data["dimensions"]),
+                truck_data["max_capacity"],
+            ))
+    else: # untuk kompatibilitas dengan input truck lama
+        num_trucks = data.get("num_trucks", 1)
+        integer(num_trucks, "num_trucks", 1)
+        truck_data = data["truck"]
+        truck = Truck(Dimensions(**truck_data["dimensions"]), truck_data["max_capacity"])
+        trucks = [truck] * num_trucks
     packages = []
     for package in data["packages"]:
         packages.append(Package(
@@ -15,21 +26,22 @@ def problem_from_dict(data: dict) -> Problem:
             value=package["value"], weight=package["weight"],
             is_fragile=package["is_fragile"], eta=package["eta"],
         ))
-    return Problem(truck, tuple(packages))
+    return Problem(tuple(trucks), tuple(packages))
 
-
+# dana, seluruh truk --> JSON
 def problem_to_dict(problem: Problem) -> dict:
-    return {"truck": {"dimensions": problem.truck.dimensions.to_dict(),
-                      "max_capacity": problem.truck.max_capacity},
+    return {"trucks": [{"dimensions": truck.dimensions.to_dict(),
+                      "max_capacity": truck.max_capacity}
+                      for truck in problem.trucks],
             "packages": [{"id": p.id, "dimensions": p.dimensions.to_dict(), "value": p.value,
                           "weight": p.weight, "is_fragile": p.is_fragile, "eta": p.eta}
                          for p in problem.packages]}
 
-
+# dana, penempatannya dari truck_index bukan inside
 def state_from_dict(data: dict) -> State:
     if not isinstance(data, dict) or not isinstance(data.get("placements"), dict):
         raise ValueError("State must contain a placements object")
-    return State({key: Placement(tuple(p["position"]), tuple(p["orientation"]), p["inside"])
+    return State({key: Placement(tuple(p["position"]), tuple(p["orientation"]), truck_index=p["truck_index"])
                   for key, p in data["placements"].items()})
 
 

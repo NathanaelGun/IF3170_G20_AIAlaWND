@@ -26,27 +26,29 @@ def run_search(problem, algorithm: str, config: dict, seed: int | None):
 
 def print_state(problem, state, title):
     print(f"\n{title} | value={objective(problem, state)}")
-    headers = ("Paket", "Status", "Posisi x,y,z", "Orientasi w,l,h", "Ukuran x,y,z",
+    headers = ("Paket", "Status", "Truk", "Posisi x,y,z", "Orientasi w,l,h", "Ukuran x,y,z",
                "Value", "Berat", "Fragile", "ETA")
     rows = []
     for package in problem.packages:
         placement = state.placements[package.id]
         rows.append((package.id, "Dalam" if placement.inside else "Luar",
+                     str(placement.truck_index + 1) if placement.inside else "-",
                      str(placement.position), ",".join(placement.orientation),
                      str(oriented_dimensions(package, placement)), str(package.value),
                      str(package.weight), "Ya" if package.is_fragile else "Tidak", str(package.eta)))
     widths = [max(len(row[i]) for row in [headers, *rows]) for i in range(len(headers))]
     for row in [headers, *rows]:
         print(" | ".join(cell.ljust(width) for cell, width in zip(row, widths)))
-    print("\nPeta truk (. = kosong):")
-    cells = coordinate_map(problem, state)
-    width = max([len(str(problem.truck.dimensions.w - 1)), 1, *[len(p.id) for p in problem.packages]])
-    for z, layer in enumerate(cells):
-        print(f"z={z}")
-        print(" y\\x " + " ".join(f"{x:>{width}}" for x in range(problem.truck.dimensions.w)))
-        for y, row in enumerate(layer):
-            print(f"{y:>4} " + " ".join(f"{cell or '.':>{width}}" for cell in row))
-
+    truck_cells = coordinate_map(problem, state)
+    for index, truck in enumerate(problem.trucks):
+        print(f"\nPeta truk {index + 1} (. = kosong):")
+        cells = truck_cells[index]
+        width = max([len(str(truck.dimensions.w - 1)), 1, *[len(p.id) for p in problem.packages]])
+        for z, layer in enumerate(cells):
+            print(f"z={z}")
+            print(" y\\x " + " ".join(f"{x:>{width}}" for x in range(truck.dimensions.w)))
+            for y, row in enumerate(layer):
+                print(f"{y:>4} " + " ".join(f"{cell or '.':>{width}}" for cell in row))
 
 def print_result(problem, result):
     print_state(problem, result.initial_state, "State awal")
@@ -217,9 +219,10 @@ def save_interactive_result(problem, result):
 def interactive():
     print("=== Optimasi Pengisian Paket Truk (IF3170 Local Search) ===")
     input_path, problem = read_problem()
-    d = problem.truck.dimensions
-    print(f"Truk {d.w} x {d.l} x {d.h}, kapasitas {problem.truck.max_capacity}, {len(problem.packages)} paket")
-
+    print(f"{len(problem.trucks)} truk, {len(problem.packages)} paket")
+    for index, truck in enumerate(problem.trucks):
+        d = truck.dimensions
+        print(f"Truk {index + 1}: {d.w} x {d.l} x {d.h}, kapasitas {truck.max_capacity}")
     choice = choose_algorithm()
     if choice == "0":
         return 0
