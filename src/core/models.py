@@ -60,12 +60,14 @@ class Package:
 
 @dataclass(frozen=True)
 class Problem:
-    truck: Truck
+    trucks: tuple[Truck, ...] # dana
     packages: tuple[Package, ...]
 
     def __post_init__(self) -> None:
         if len({p.id for p in self.packages}) != len(self.packages):
             raise ValueError("Package ids must be unique")
+        if not self.trucks:
+            raise ValueError("Problem must contain at least one truck")
 
     @property
     def package_by_id(self) -> dict[str, Package]:
@@ -76,7 +78,7 @@ class Problem:
 class Placement:
     position: tuple[int, int, int]
     orientation: tuple[str, str, str] = ("x", "y", "z")
-    inside: bool = False
+    truck_index: int | None = None
 
     def __post_init__(self) -> None:
         if not isinstance(self.position, tuple) or len(self.position) != 3:
@@ -85,11 +87,20 @@ class Placement:
             integer(value, "coordinate")
         if self.orientation not in ORIENTATIONS:
             raise ValueError("orientation must map w/l/h to a permutation of x/y/z")
-        if type(self.inside) is not bool:
-            raise ValueError("inside must be a boolean")
+        if self.truck_index is not None:                            # dana
+            integer(self.truck_index, "truck_index", 0)
+
+    @property
+    def inside(self) -> bool:
+        return self.truck_index is not None
 
     def to_dict(self) -> dict:
-        return {"position": list(self.position), "orientation": list(self.orientation), "inside": self.inside}
+        return {
+            "position": list(self.position),
+            "orientation": list(self.orientation),
+            "truck_index": self.truck_index,
+            "inside": self.inside,
+        }
 
 
 @dataclass
@@ -121,7 +132,7 @@ class SearchResult:
 
     def to_dict(self) -> dict:
         return {
-            "schema_version": 1,
+            "schema_version": 2,
             "algorithm": self.algorithm,
             "parameters": self.parameters,
             "seed": self.seed,
